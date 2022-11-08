@@ -17,7 +17,7 @@ public class Index {
         System.out.print("인증코드 : ");     String code = scanner.nextLine();
         System.out.print("비밀번호 : ");      String mpassword = scanner.nextLine();
         System.out.print("비밀번호확인 : ");  String mpasswordcheck = scanner.nextLine();
-
+        
         // 1. 빈생성자 [ @NoArgsConstructor ]
         MemberDto dto1 = new MemberDto();
 

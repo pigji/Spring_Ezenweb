@@ -21,6 +21,7 @@ public class MemberDto {
         this.mpassword = mpassword;
     }
     */
+    
     // 3. get / set =>  @Getter @Setter
         // [ private 필드 외부 간접접근용 메소드  ]
     // 4. toString => @ToString

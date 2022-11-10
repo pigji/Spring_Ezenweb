@@ -1,4 +1,4 @@
-package Ezenweb.controller;
+package com.Ezenweb.controller;
 
 import Ezenweb.domain.Dto.MemberDto;
 import org.springframework.web.bind.annotation.PutMapping;

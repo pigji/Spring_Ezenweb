@@ -1,4 +1,4 @@
-package Ezenweb;
+package com.Ezenweb;
 
 import Ezenweb.view.Index;
 import org.springframework.beans.factory.annotation.Autowired;

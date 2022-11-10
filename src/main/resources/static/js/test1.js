@@ -75,31 +75,27 @@ function getMapping8(){
 function postMapping1(){
     alert('1번')
     $.ajax({
-        url: "/api/v1/post-api/domain",
-        type: "POST",
-        success: function( re ) { alert( re ); }
+         url : "/api/v1/post-api/domain",
+         type : "POST",
+         success: function(re) { alert(re); }
     })
 }
 
 function postMapping2(){
-   let member = {
-        name : "유재석",
-        email : "qwe@ane.com",
-        organization : "qerqerq"
-   }
-
-    alert('2번')
-   $.ajax({
-        url: "/api/v1/post-api/member",
-        type : "post",
-        data : JSON.stringify(member),
-        contentType: "application/json",    // 전송타입 : application/json
-        success : function( re ) { alert( re ); }
-   })
+   let member = {   name : "유재석" ,  email : "qweqwe@qweqwe", organization : "qweqweqwe"}
+       alert('2번')
+       $.ajax({
+           url : "/api/v1/post-api/member",
+           type : "post",
+           data : JSON.stringify(member) ,
+           contentType : "application/json" ,  // 전송타입 : application/json
+           success: function(re) { alert(re); }
+       })
 }
 
 function postMapping3(){
     alert('3번')
+     let member = {   name : "유재석" ,  email : "qweqwe@qweqwe", organization : "qweqweqwe"}
     $.ajax({
         url: "/api/v1/post-api/member2",
         type : "post",
@@ -111,6 +107,7 @@ function postMapping3(){
 /* -------------------------------------------------------------------------------- */
 function putMapping1(){
     alert('1번')
+    let member = {   name : "유재석" ,  email : "qweqwe@qweqwe", organization : "qweqweqwe"}
     $.ajax({
         url: "/api/v1/put-api/member",
         type: "PUT",

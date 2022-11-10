@@ -1,10 +1,7 @@
 package com.Ezenweb.controller;
 
-import Ezenweb.domain.Dto.MemberDto;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.Ezenweb.domain.Dto.MemberDto;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -20,12 +17,14 @@ public class PutController {
 
     // 2. [ p.71 ]      반환타입 : 문자열 [String]
     @PutMapping("/member1")
-    public String postMemberDto(@RequestBody MemberDto memberDto ){
+    public String postMemberDto( @RequestBody MemberDto memberDto ){
         return memberDto.toString();
     }
+
     // 2-2 [ p.72 ]     반환타입 : DTO [ MemberDto ]
     @PutMapping("/member2")
-    public MemberDto postMemberDto2(@RequestBody MemberDto memberDto ){
+    @ResponseBody
+    public MemberDto postMemberDto2( @RequestBody MemberDto memberDto ){
         return memberDto;
     }
 

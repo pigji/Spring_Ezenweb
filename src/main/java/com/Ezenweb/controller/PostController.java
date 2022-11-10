@@ -1,6 +1,6 @@
 package com.Ezenweb.controller;
 
-import Ezenweb.domain.Dto.MemberDto;
+import com.Ezenweb.domain.Dto.MemberDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

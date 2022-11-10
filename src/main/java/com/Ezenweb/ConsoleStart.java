@@ -1,13 +1,12 @@
 package com.Ezenweb;
 
-import Ezenweb.view.Index;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class ConsoleStart {
     public static void main(String[] args) {
-        new Index().index();
-
-
-
+        SpringApplication.run(ConsoleStart.class);
     }
 }

@@ -1,4 +1,4 @@
-alert('js연결')
+//alert('js연결')
 
 /* 1. @RequestMapping --> hello World 출력 */
 function getMapping1(){
@@ -118,57 +118,46 @@ function putMapping1(){
 }
 
 function putMapping2(){
-    let member = {
-            name : "유재석",
-            email : "qwe@ane.com",
-            organization : "qerqerq"
-       }
-
-       alert('2번')
-       $.ajax({
-            url: "/api/v1/post-api/member1",
+    alert('2번')
+    let member = {   name : "유재석" ,  email : "qweqwe@qweqwe", organization : "qweqweqwe"}
+        $.ajax({
+            url : "/api/v1/put-api/member1",
             type : "PUT",
             data : JSON.stringify(member),
-            contentType: "application/json",    // 전송타입 : application/json
-            success : function( re ) { console.log( re ); }
-       })
-}
+            contentType : "application/json",
+            success : function(re) { console.log( re ) }
+        })
+    }
 
 function putMapping3(){
-    let member = {
-            name : "유재석",
-            email : "qwe@ane.com",
-            organization : "qerqerq"
-       }
-
-       alert('2번')
-       $.ajax({
-            url: "/api/v1/post-api/member2",
+    alert('2번')
+    let member = {   name : "유재석" ,  email : "qweqwe@qweqwe", organization : "qweqweqwe"}
+        $.ajax({
+            url : "/api/v1/put-api/member2",
             type : "PUT",
             data : JSON.stringify(member),
-            contentType: "application/json",    // 전송타입 : application/json
-            success : function( re ) {
-                    console.log( re );
-                    console.log( re.name );
-                    // let json = JSON.parse( re ); console.log( json );
+            contentType : "application/json",
+            success : function(re) {
+               console.log( re );
+               console.log( re.name );
+               // let json =  JSON.parse( re ); console.log( json );
             }
-
-       })
-}
+        })
+    }
 /* ----------------------------------------------------------------------------------- */
 function deleteMapping1(){
     alert('1번')
     $.ajax({
-        url: "/api/v1/post-api/하하하1",
-        type: "DELETE",
-        success: function( re ) { alert( re ); }
+        url : "/api/v1/delete-api/하하하1",
+        type : "DELETE",
+        success : function(re) { alert(re); }
     })
 }
 
 function deleteMapping2(){
     alert('2번')
     $.ajax({
-        url: "/api/v1/post-api/request1?variable=하하하하2",
+        url: "/api/v1/delete-api/request1?variable=하하하하2",
         type: "DELETE",
         success: function( re ) { alert( re ); }
     })

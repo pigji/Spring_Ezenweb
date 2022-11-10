@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월10일목요일 [ POST API, PUT API, DELETE API ]">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/GetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/Test1Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/Webstart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/GetController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/Test1Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/domain/Dto/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/Dto/MemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/view/Index.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/ConsoleStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/ConsoleStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/DeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/GetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/GetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/PutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/PutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/MemberDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/test1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668050324223</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="11월10일목요일 [ POST API, PUT API, DELETE API ]">
+      <created>1668057450046</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668057450046</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

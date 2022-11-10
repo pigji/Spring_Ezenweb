@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/GetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/Test1Centroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/MemberDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/test1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월9일수요일 [ 스프링부트 실행/ 출력/ API/ 여러가지 GET메소드 구현 ]">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/Webstart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/DeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/controller/PutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/model/Dto/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/domain/Dto/MemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ezenweb/view/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ezenweb/view/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/test1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,7 +42,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HHuzM8jLUL91V2x3p8Oij2j7eW" />
   <component name="ProjectViewState">
@@ -49,7 +52,10 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -59,7 +65,20 @@
       <recent name="C:\Users\504\Desktop\springweb\Ezenweb\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.WebStart">
+    <configuration name="ConsoleStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ezenweb.ConsoleStart" />
+      <module name="Ezenweb.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ezenweb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Ezenweb.WebStart" />
       <module name="Ezenweb.main" />
@@ -75,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsoleStart" />
         <item itemvalue="Application.WebStart" />
       </list>
     </recent_temporary>
@@ -88,6 +108,14 @@
       <option name="presentableId" value="Default" />
       <updated>1667954591391</updated>
     </task>
+    <task id="LOCAL-00001" summary="11월9일수요일 [ 스프링부트 실행/ 출력/ API/ 여러가지 GET메소드 구현 ]">
+      <created>1667975880451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667975880451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,5 +128,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="11월9일수요일 [ 스프링부트 실행/ 출력/ API/ 여러가지 GET메소드 구현 ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="11월9일수요일 [ 스프링부트 실행/ 출력/ API/ 여러가지 GET메소드 구현 ]" />
   </component>
 </project>

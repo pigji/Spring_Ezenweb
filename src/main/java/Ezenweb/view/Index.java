@@ -1,7 +1,6 @@
 package Ezenweb.view;
 
-import Ezenweb.model.Dto.MemberDto;
-import org.springframework.beans.factory.annotation.Autowired;
+import Ezenweb.domain.Dto.MemberDto;
 
 import java.util.Scanner;
 

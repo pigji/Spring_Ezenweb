@@ -1,4 +1,4 @@
-package Ezenweb.model.Dto;
+package Ezenweb.domain.Dto;
 
 import lombok.*;
 

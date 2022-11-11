@@ -1,6 +1,6 @@
 package com.Ezenweb.controller;
 
-import com.Ezenweb.domain.Dto.MemberDto;
+import com.Ezenweb.domain.dto.MemberDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -27,5 +27,24 @@ public class PutController {
     public MemberDto postMemberDto2( @RequestBody MemberDto memberDto ){
         return memberDto;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 } // class end

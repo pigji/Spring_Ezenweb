@@ -21,4 +21,9 @@ public class WebStart {
     2. @ 어노테이션 [ 여러개 가능 ]
         1. 내장 : @override : 부모로부터 상속 메소드를 재정의 할때 사용
         2. 메타 : 빌드[실행] 할때 자동적으로 코드가 생성
+        
+            2. @SpringBootApplication : 컴포넌트 스캔
+                컴포넌트를 사용하는 클래스들을 스캔 빈[ 스프링 메모리 ] 등록
+                    1. @Controller
+                    2. @RestController
  */

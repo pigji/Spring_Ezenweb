@@ -1,4 +1,4 @@
-package com.Ezenweb.domain.Dto;
+package com.Ezenweb.domain.dto;
 
 import lombok.*;
 

@@ -4,26 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월14일월요일 [ Dao 사용 없이 출력 ]">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/findpassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/findpassword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/update.html" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월15일화요일 [ index페이지, 회원가입, 로그인, 비밀번호 찾기, 회원수정, 로그아웃, 탈퇴하기, 로그인여부 판단 ]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/MemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/MemberEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668416831417</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="11월15일화요일 [ index페이지, 회원가입, 로그인, 비밀번호 찾기, 회원수정, 로그아웃, 탈퇴하기, 로그인여부 판단 ]">
+      <created>1668505486741</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668505486741</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +179,7 @@
     <MESSAGE value="11월10일목요일 [ POST API, PUT API, DELETE API ]" />
     <MESSAGE value="11월11일금요일 DAO사용해서 글쓰기, 글목록 콘솔창 출력" />
     <MESSAGE value="11월14일월요일 [ Dao 사용 없이 출력 ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="11월14일월요일 [ Dao 사용 없이 출력 ]" />
+    <MESSAGE value="11월15일화요일 [ index페이지, 회원가입, 로그인, 비밀번호 찾기, 회원수정, 로그아웃, 탈퇴하기, 로그인여부 판단 ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="11월15일화요일 [ index페이지, 회원가입, 로그인, 비밀번호 찾기, 회원수정, 로그아웃, 탈퇴하기, 로그인여부 판단 ]" />
   </component>
 </project>

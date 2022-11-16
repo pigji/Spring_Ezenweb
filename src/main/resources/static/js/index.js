@@ -1,4 +1,4 @@
-alert("index 페이지")
+//alert("index 페이지")
 
 getloginMno();
 
@@ -27,17 +27,18 @@ function getloginMno(){
     })
 }
 
-/* 로그아웃 */
+/* 로그아웃 버튼을 눌렀을때 [ 서버에 있는 세션을 초기화 ] */
 function logout(){
     alert("로그아웃 버튼 누름")
     $.ajax({
-        url: "/member/logout",
-        type: "get",
-        success: function( re ){
+        url: "/member/logout",      // 요청 URL
+        type: "get",                // 요청 메소드
+        success: function( re ){    // 응답
             alert( re )
-            if( re == true ){
+            if( re == true ){       // 로그아웃 성공했을때
                 alert("로그아웃 성공")
-                location.href = "localhost:8080"
+                location.href = "/"  // index.html 반환해주는 매핑 주소
+                       // location.href = URL 주소 값
             }else{
                 alert("로그아웃 실패..")
             }
@@ -46,3 +47,20 @@ function logout(){
     })
 }
 
+/* 회원목록 가져오기 */
+function list(){
+    $.ajax({
+        url: "/member/list",
+        type: "get",
+        success: function(list){
+            console.log( re )
+
+            let html = '<tr> <th> 번호 </th> <th> 이메일 </th> <th> 비밀번호 </th></tr>';
+            list.forEach( (m) => {
+                    html +=
+                    '<tr> <th>'+m.mno+'</th> <th>'+m.memail+'</th> <th>'+m.mpassword+'</th> </tr>';
+            })
+            document.querySelector(".mtable").innerHTML = html;
+        }
+    })
+}

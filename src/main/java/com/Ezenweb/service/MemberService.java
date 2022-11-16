@@ -3,13 +3,18 @@ package com.Ezenweb.service;
 import com.Ezenweb.domain.dto.MemberDto;
 import com.Ezenweb.domain.entity.MemberEntity;
 import com.Ezenweb.domain.entity.MemberRepository;
+import com.sun.xml.internal.org.jvnet.mimepull.MIMEMessage;
 import jdk.nashorn.internal.ir.RuntimeNode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,6 +26,9 @@ public class MemberService {
     private MemberRepository memberRepository;  // 리포지토리 객체
     @Autowired // 스프링 컨테이너[ 메모리 ] 위임
     private HttpServletRequest request;          // 요청 객체
+    // 메일전송 객체
+    @Autowired
+    private JavaMailSender javaMailSender;
 
 // ---------------------- 서비스 메소드 --------------------------
     // 1. 회원가입
@@ -120,7 +128,61 @@ public class MemberService {
     }
     // 7. 로그아웃
     public boolean logout(){
-        request.getSession().setAttribute("loginMno", null);
+        request.getSession().setAttribute("loginMno", null);    // get : 가져오기 , set : 등록하기
         return true;
     }
+    // 8. 회원목록
+    public List<MemberDto> list(){
+        // 1. JPA를 이용한 모든 엔티티 호출
+        List<MemberEntity> list = memberRepository.findAll();
+        // 2. 엔티티 --> DTO 변경
+            // DTO list 선언
+        List<MemberDto> dtoList = new ArrayList<>();
+        for( MemberEntity entity : list ){
+            dtoList.add( entity.toDto() );  // 엔티티 --> DTO 형변환
+        }
+        return dtoList;
+    }
+
+    // 9. 인증코드 발송
+    public String getauth( String toemail ){
+        String auth = "12345678";   // 인증코드
+        meailsend( toemail, "Ezenweb 인증코드", auth );     // 메일전송
+        return auth;    // 인증코드 반환
+    }
+    // *. 메일전송 서비스
+    public void meailsend( String toemail, String title, String content ) {
+        try {
+            // 1. Mime 프로토콜 객체 생성
+            MimeMessage massage = javaMailSender.createMimeMessage();
+            // 2. Mime 설정 new MimeMessageHelper( mime객체명, 첨부파일여부, 인코딩타입 )
+            MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(massage, true, "UTF-8");
+            // 3. 보내는 사람
+            mimeMessageHelper.setFrom("wjlqlrll@naver.com", "Ezenweb");
+            // 4. 받는 사람
+            mimeMessageHelper.setTo(toemail);
+            // 5. 메일 제목
+            mimeMessageHelper.setSubject(title);
+            // 6. 메일 내용
+            mimeMessageHelper.setText(content.toString(), true);  // HTML 형식
+            // 7. 메일 전송
+            javaMailSender.send(massage);
+        } catch (Exception e) {
+            System.out.println("메일전송 실패 : " + e);
+        }
+
+    }
+
 } // clas end
+
+/*
+    메일 전송
+        1. 라이브러리 : testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        2. 보내는사람 정보 이메일 정보[ application.properties ]
+            네이버기준
+                1. 네이버로그인 -> 메일 -> 환경설정
+                2. POP3/SMTP 설정 -> 사용함
+                3. host. port 등 정보작성
+        3.
+
+ */

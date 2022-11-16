@@ -3,12 +3,10 @@ package com.Ezenweb.service;
 import com.Ezenweb.domain.dto.MemberDto;
 import com.Ezenweb.domain.entity.MemberEntity;
 import com.Ezenweb.domain.entity.MemberRepository;
-import com.sun.xml.internal.org.jvnet.mimepull.MIMEMessage;
-import jdk.nashorn.internal.ir.RuntimeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.mail.internet.MimeMessage;
@@ -146,32 +144,25 @@ public class MemberService {
 
     // 9. 인증코드 발송
     public String getauth( String toemail ){
-        String auth = "12345678";   // 인증코드
-        meailsend( toemail, "Ezenweb 인증코드", auth );     // 메일전송
-        return auth;    // 인증코드 반환
+        String auth = "12345678"; // 인증코드
+        meailsend( toemail , "EzenWeb 인증코드" , auth );   // 메일전송
+        return auth; // 인증코드 반환
     }
-    // *. 메일전송 서비스
-    public void meailsend( String toemail, String title, String content ) {
+    // *. 메일 전송 서비스
+    public void meailsend( String toemail , String title , String content ){
         try {
-            // 1. Mime 프로토콜 객체 생성
-            MimeMessage massage = javaMailSender.createMimeMessage();
-            // 2. Mime 설정 new MimeMessageHelper( mime객체명, 첨부파일여부, 인코딩타입 )
-            MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(massage, true, "UTF-8");
-            // 3. 보내는 사람
-            mimeMessageHelper.setFrom("wjlqlrll@naver.com", "Ezenweb");
-            // 4. 받는 사람
-            mimeMessageHelper.setTo(toemail);
-            // 5. 메일 제목
-            mimeMessageHelper.setSubject(title);
-            // 6. 메일 내용
-            mimeMessageHelper.setText(content.toString(), true);  // HTML 형식
-            // 7. 메일 전송
-            javaMailSender.send(massage);
-        } catch (Exception e) {
-            System.out.println("메일전송 실패 : " + e);
-        }
+            MimeMessage message = javaMailSender.createMimeMessage(); // 1. Mime 프로토콜 객체 생성
+            // 2. MimeHelper 설정 객체 생성  new MimeMessageHelper( mime객체명 , 첨부파일여부 , 인코딩타입 )
+            MimeMessageHelper mimeMessageHelper = new MimeMessageHelper( message, true, "utf-8");
+            mimeMessageHelper.setFrom("wjlqlrll@naver.com", "Ezenweb"); // 3. 보내는사람 정보
+            mimeMessageHelper.setTo(toemail);  // 4. 받는 사람
+            mimeMessageHelper.setSubject(title); // 5. 메일 제목
+            mimeMessageHelper.setText(content.toString(), true); // HTML 형식  // 6. 메일 내용
+            javaMailSender.send( message );// 7. 메일 전송
+        }catch (Exception e){ System.out.println("메일전송 실패 : "+e); }
 
     }
+
 
 } // clas end
 

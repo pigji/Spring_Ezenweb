@@ -8,9 +8,20 @@
 
     <h3> 회원가입 </h3>
 
-    이메일 : <input type="text" class="memail"><br>
-    비밀번호 : <input type="text" class="mpassword">
-    <button type="button" onclick="setmember()">가입하기</button>
+    <div>
+        이메일 : <input type="text" class="memail">
+        <button type="button" onclick="getauth()" class="getauthbtn">인증코드 받기</button>
+        <div class="authbox">
+            <input type="text" class="authinput">   <!-- 인증코드 입력박스 -->
+            <button type="button" class="authbtn" onclick="auth">인증</button>
+            <span class="timerbox"></span>  <!-- 타이머 박스 -->
+        </div>
+    </div>
+
+        전화번호 : <input type="text" class="mphone"><br>
+        비밀번호 : <input type="text" class="mpassword"><br>
+        <button type="button" onclick="setmember()">가입하기</button>
+
 
 
     <!-- jquery -->

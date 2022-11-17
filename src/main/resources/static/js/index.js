@@ -48,12 +48,14 @@ function logout(){
 }
 
 /* 회원목록 가져오기 */
+list()
 function list(){
+
     $.ajax({
         url: "/member/list",
         type: "get",
         success: function(list){
-            console.log( re )
+            console.log( list )
 
             let html = '<tr> <th> 번호 </th> <th> 이메일 </th> <th> 비밀번호 </th></tr>';
             list.forEach( (m) => {

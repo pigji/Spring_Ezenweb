@@ -88,9 +88,10 @@ public class MemberController {
         return list;
     }
 
-    @GetMapping("/getauth")     // *. 이메일 인증
-    public String gotauth( @RequestParam("toemail") String toemail ){
-        return memberService.getauth("itdanja@kakao.com" );
+    @GetMapping("/getauth")     // 9. 이메일 인증
+    public String gotauth(  ){
+        return memberService.getauth( "이메일주소입력" );
+        // return "1234"
     }
 
 

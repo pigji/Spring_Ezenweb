@@ -15,6 +15,7 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service // 해당 클래스가 Service 명시 // 1. 비지니스 로직 [ 알고리즘 - 기능 ]
 public class MemberService {
@@ -144,21 +145,37 @@ public class MemberService {
 
     // 9. 인증코드 발송
     public String getauth( String toemail ){
-        String auth = "12345678"; // 인증코드
-        meailsend( toemail , "EzenWeb 인증코드" , auth );   // 메일전송
-        return auth; // 인증코드 반환
+        String auth = "";
+        String html = "<html><body><h1> EZENWEB 회원 가입 이메일 인증코드입니다. </h1>";
+
+        Random random = new Random();   // 1. 난수 객체 생성
+        for( int i=0; i<6; i++ ){       // 6번 실행
+            char randchar = (char)(random.nextInt(26)+97);  // 아스키코드 : 97~122번까지 : 알파벳 소문자
+                // char randchar = (char)(random.nextInt(10)+48)   // 아스키코드 : 48~57번까지 : 숫자 0~9
+            auth += randchar;
+        }
+        html +="<div>인증코드 : "+auth+"</div>";
+        html += "</body></html>";
+        meailsend( toemail, "EzenWeb 인증코드", html );
+        return auth;    // 인증코드 반환
     }
     // *. 메일 전송 서비스
     public void meailsend( String toemail , String title , String content ){
         try {
-            MimeMessage message = javaMailSender.createMimeMessage(); // 1. Mime 프로토콜 객체 생성
+            // 1. Mime 프로토콜 객체 생성
+            MimeMessage message = javaMailSender.createMimeMessage();
             // 2. MimeHelper 설정 객체 생성  new MimeMessageHelper( mime객체명 , 첨부파일여부 , 인코딩타입 )
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper( message, true, "utf-8");
-            mimeMessageHelper.setFrom("wjlqlrll@naver.com", "Ezenweb"); // 3. 보내는사람 정보
-            mimeMessageHelper.setTo(toemail);  // 4. 받는 사람
-            mimeMessageHelper.setSubject(title); // 5. 메일 제목
-            mimeMessageHelper.setText(content.toString(), true); // HTML 형식  // 6. 메일 내용
-            javaMailSender.send( message );// 7. 메일 전송
+            // 3. 보내는사람 정보
+            mimeMessageHelper.setFrom("wjlqlrll@naver.com", "Ezenweb");
+            // 4. 받는 사람
+            mimeMessageHelper.setTo(toemail);
+            // 5. 메일 제목
+            mimeMessageHelper.setSubject(title);
+            // 6. 메일 내용
+            mimeMessageHelper.setText(content.toString(), true); // HTML 형식
+            // 7. 메일 전송
+            javaMailSender.send( message );
         }catch (Exception e){ System.out.println("메일전송 실패 : "+e); }
 
     }

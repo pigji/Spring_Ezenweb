@@ -17,6 +17,7 @@ function getloginMno(){
                             '<a href="/member/login"><button type="button"> 로그인 </button></a>'
             }else{  // 로그인 했을 경우
                 headerbox =
+                    '<a href="/board/write"><button type="button"> 글쓰기 </button></a>'+
                     '<a href=""><button type="button" onclick="logout()"> 로그아웃 </button></a>'+
                     '<a href="/member/findpassword"><button type="button"> 비밀번호 찾기 </button></a>'+
                     '<a href="/member/update"><button type="button"> 회원정보 수정 </button></a>'+

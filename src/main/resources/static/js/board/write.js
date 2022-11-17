@@ -1,4 +1,4 @@
-alert("글쓰기 적용");
+//alert("글쓰기 적용");
 
 // 등록 버튼을 눌렀을때
 function setboard(){

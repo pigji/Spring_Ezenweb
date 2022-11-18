@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>수정</title>
+    <title>수정페이지</title>
 </head>
 <body>
 
     <h3> 회원정보 수정 </h3>
 
-    새로운 비밀번호 : <input type="text" class="mpassword"><br>
-    <button type="button" onclick="setupdate()"> 수정하기 </button>
+    <form>
+        제목 : <input type="text" class="btitle"><br>
+        내용 : <input type="text" class="bcontent"><br>
+        첨부파일 : <input type="text" class="bfile">
+        <button type="button" onclick="setboard()"> 수정하기 </button>
+    </form>
+
 
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- 사용자지정 JS -->
-    <script src="/js/member/update.js"></script>
+    <script src="/js/board/update.js"></script>
 
 </body>
 </html>

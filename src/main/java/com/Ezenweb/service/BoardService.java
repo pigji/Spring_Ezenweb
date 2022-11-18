@@ -1,13 +1,15 @@
 package com.Ezenweb.service;
 
-import com.Ezenweb.domain.dao.BoardDao;
 import com.Ezenweb.domain.dto.BoardDto;
-import com.Ezenweb.domain.entity.BoardEntity;
-import com.Ezenweb.domain.entity.BoardRepository;
+import com.Ezenweb.domain.entity.board.BoardEntity;
+import com.Ezenweb.domain.entity.board.BoardRepository;
+import com.Ezenweb.domain.entity.member.MemberEntity;
+import com.Ezenweb.domain.entity.member.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +19,11 @@ public class BoardService {
 
     //------------------ 1. 전역변수 --------------------//
     @Autowired
-    private BoardRepository boardRepository;
+    private HttpServletRequest request; // 요청 객체 선언
+    @Autowired
+    private MemberRepository memberRepository;  // 회원 리포지토리 객체 선언
+    @Autowired
+    private BoardRepository boardRepository;    // 게시물 리포지토리 객체 선언
         // @Transactional : 엔티티 DML 적용할때 사용되는 어노테이션
         // 1. 메소드
             /*
@@ -30,15 +36,32 @@ public class BoardService {
     // ------------------ 2. 서비스 기능 -----------------//
     // 1. 게시물 쓰기
     @Transactional        // ( 자료형   힙 주소 )
-    public boolean setboard( BoardDto boardDto ){
-        // 1. dto --> entity [ Insert ] 저장된 entity 반환
+    public boolean setboard( BoardDto boardDto ){   // 1. dto --> entity [ Insert ] 저장된 entity 반환
 
-        BoardEntity entity = boardRepository.save( boardDto.toEntity() );
+        // 1. 로그인 정보 확인[ 세션 = loginMno ]
+        Object object = request.getSession().getAttribute("loginMno");
+        if( object == null ){ return false; }
+
+        // 2. 로그인된 회원번호
+        int mno = (Integer)object;
+        // 3. 회원번호 --> 회원정보 호출
+        Optional<MemberEntity> optional = memberRepository.findById(mno);
+        if( !optional.isPresent() ){ return false; }    // 만약에 내용물이 없으면 false 출력
+        // 4. 로그인된 회원의 엔티티
+        MemberEntity memberEntity = optional.get();
+
+        BoardEntity boardEntity = boardRepository.save( boardDto.toEntity() );
             // 클래스명.메소드명();     // 메소드가 static 일 경우 가능
             // 객체명.메소드명();  //
 
         // 2. 생성된 entity의 게시물 번호가 0이 아니면
-        if( entity.getMno() != 0 ){ return true; }  // 생성된 entity의 게시물번호가 0이 아니면 성공
+        if( boardEntity.getBno() != 0 ){
+            // 5. ** fk 대입
+            boardEntity.setMemberEntity( memberEntity );
+            // ** 양방향[ pk필드에 fk 연결 ]
+            memberEntity.getBoardEntityList().add( boardEntity );
+            return true;    // 생성된 entity의 게시물번호가 0이 아니면 성공
+        }
         else{ return false; }   // 0이면 entity 생성 실패
     }
 

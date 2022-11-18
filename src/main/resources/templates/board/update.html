@@ -6,12 +6,19 @@
 </head>
 <body>
 
-    <h3> 수정 페이지 </h3>
+    <h3> 게시물 수정 페이지 </h3>
+
+    <form>
+        제목 : <input type="text" class="btitle"><br>
+        내용 : <input type="text" class="bcontent"><br>
+        첨부파일 : <input type="text" class="bfile">
+        <button type="button" onclick="upboard()"> 수정하기 </button>
+    </form>
 
 
     <!-- 제이쿼리 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/js/board/list.js"></script>
+    <script src="/js/board/update.js"></script>
 
 </body>
 </html>

@@ -1,16 +1,71 @@
 package com.Ezenweb.controller;
 
+import com.Ezenweb.domain.dto.IcategoryDto;
+import com.Ezenweb.domain.dto.IndexDto;
+import com.Ezenweb.domain.entity.indexcategory.IndexcategoryEntity;
+import com.Ezenweb.domain.entity.indexcategory.IndexcategoryRepository;
+import com.Ezenweb.service.index.IndexlistService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
+@RequestMapping("/index")   // 공통 URL
 public class IndexController {
 
-    @GetMapping("/")    // 최상위 경로   //http://localhost:8080 --> 도메인 구매시 www.ezenweb.com
-    public Resource getindex(){
-        return new ClassPathResource("templates/index.html");
+    // 1. 전역변수
+    @Autowired
+    private IndexlistService indexlistService ;
+
+    // --------------------- 2. 페이지 요청 -------------------- //
+    // 1. 게시물 목록 페이지 열기
+    @GetMapping("/list")
+    public Resource getlist(){
+        return new ClassPathResource("templates/index/list.html");
     }
+    // 2. 게시물쓰기 페이지 열기
+    @GetMapping("/write")
+    public Resource getwrite(){
+        return new ClassPathResource("templates/index/write.html");
+    }
+
+    // --------------------- 3. 요청과 응답 ----------------------- //
+    // 1. 게시물 쓰기
+    @PostMapping("/setboard")
+    public boolean seboard( @RequestBody IndexDto indexDto ){
+        System.out.println( indexDto.toString() );
+        return indexlistService.setboard( indexDto );
+    }
+
+    // 2. 게시물 목록조회
+    @GetMapping("/boardlist")
+    public List<IndexDto> boardlist( @RequestParam("icno") int icno ){
+        return indexlistService.boardlist( icno );
+    }
+
+    // 3. 게시물 개별 조회
+    @GetMapping("/getboard")
+    public IndexDto getboard( @RequestParam("ino") int ino ){ return indexlistService.getboard( ino ); }
+
+    // 4. 카테고리 등록
+    @PostMapping("/setbcategory")
+    public boolean seticategory( @RequestBody IcategoryDto icategoryDto ){
+        System.out.println( icategoryDto );
+        return indexlistService.setbcategory( icategoryDto );
+    }
+    // 5. 모든 카테고리 출력
+    @GetMapping("/icategorylist")
+    public List<IcategoryDto> icategorylist(){
+        return indexlistService.icategorylist();
+    }
+
+
 
 } // class end

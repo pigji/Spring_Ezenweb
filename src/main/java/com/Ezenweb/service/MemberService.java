@@ -24,11 +24,26 @@ public class MemberService {
     private MemberRepository memberRepository;  // 리포지토리 객체
     @Autowired // 스프링 컨테이너[ 메모리 ] 위임
     private HttpServletRequest request;          // 요청 객체
-    // 메일전송 객체
     @Autowired
-    private JavaMailSender javaMailSender;
+    private JavaMailSender javaMailSender;       // 메일전송 객체
 
 // ---------------------- 서비스 메소드 --------------------------
+
+    // * 로그인된 엔티티 호출
+    public MemberEntity getEntity(){
+        // 1. 로그인 정보 확인[ 세션 = loginMno ]
+        Object object = request.getSession().getAttribute("loginMno");
+        if( object == null ) { return null; }
+        // 2. 로그인된 회원번호
+        int mno = (Integer)object;
+        // 3. 회원번호 --> 회원정보 호출
+        Optional<MemberEntity> optional =  memberRepository.findById(mno);
+        if( !optional.isPresent() ){ return null; }
+        // 4. 로그인된 회원의 엔티티
+        return optional.get();
+    }
+
+
     // 1. 회원가입
     public int setmember(MemberDto memberDto ){
         // 1. DAO 처리 [ dto --> entity

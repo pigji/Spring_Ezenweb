@@ -67,3 +67,8 @@ function list(){
         }
     })
 }
+
+/* 비회원제 게시판 */
+function inboardlist(){
+
+}

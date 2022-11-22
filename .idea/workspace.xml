@@ -4,39 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월18일금요일 회원제 게시판[ 글쓰기, 글목록, 글수정, 글삭제, 카테고리 ]">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/BcategoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/IcategoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/IndexDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/index/IndexlistEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/index/IndexlistRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/indexcategory/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/indexcategory/IndexcategoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/indexcategory/IndexcategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/test/연관관계/테스트.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/test/연관관계/학급.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/test/연관관계/학생.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/test/연관관계2/이미지.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/test/연관관계2/제품.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/test/연관관계2/테스트.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/index/IndexlistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/write.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index/write.html" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/bcategory/BcategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/bcategory/BcategoryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/write.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/IndexDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/IndexDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/index/IndexlistEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/index/IndexlistEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/index/IndexlistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/index/IndexlistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668762627055</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="11월21일월요일 게시판 - 카테고리 등록, 전체출력, 카테고리별 게시판 출력">
+      <created>1669025932202</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669025932202</updated>
+    </task>
+    <task id="LOCAL-00014" summary="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]">
+      <created>1669025956275</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669025956275</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +241,9 @@
     <MESSAGE value="11월16일수요일 SMTP[ 메일전송, 인증번호 ]" />
     <MESSAGE value="11월17일목요일 게시판 만들기" />
     <MESSAGE value="11월18일금요일 회원제 게시판[ 글쓰기, 글목록, 글수정, 글삭제, 카테고리 ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="11월18일금요일 회원제 게시판[ 글쓰기, 글목록, 글수정, 글삭제, 카테고리 ]" />
+    <MESSAGE value="11월21일월요일 게시판 - 카테고리 등록, 전체출력, 카테고리별 게시판 출력" />
+    <MESSAGE value="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

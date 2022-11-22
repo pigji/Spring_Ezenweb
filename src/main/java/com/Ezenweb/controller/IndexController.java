@@ -24,22 +24,18 @@ public class IndexController {
     @Autowired
     private IndexlistService indexlistService ;
 
-    // --------------------- 2. 페이지 요청 -------------------- //
+    // --------------------- 2. 페이지 요청( view )  -------------------- //
     // 1. 게시물 목록 페이지 열기
-    @GetMapping("/list")
+    @GetMapping("/list")    // http://localhost:8080/index/list
     public Resource getlist(){
         return new ClassPathResource("templates/index/list.html");
     }
-    // 2. 게시물쓰기 페이지 열기
-    @GetMapping("/write")
-    public Resource getwrite(){
-        return new ClassPathResource("templates/index/write.html");
-    }
 
-    // --------------------- 3. 요청과 응답 ----------------------- //
+
+    // --------------------- 3. 요청과 응답 ( model ) ----------------------- //
     // 1. 게시물 쓰기
     @PostMapping("/setboard")
-    public boolean seboard( @RequestBody IndexDto indexDto ){
+    public boolean setboard( @RequestBody IndexDto indexDto ){
         System.out.println( indexDto.toString() );
         return indexlistService.setboard( indexDto );
     }
@@ -52,19 +48,29 @@ public class IndexController {
 
     // 3. 게시물 개별 조회
     @GetMapping("/getboard")
-    public IndexDto getboard( @RequestParam("ino") int ino ){ return indexlistService.getboard( ino ); }
+    public IndexDto getboard( @RequestParam("ino") int ino ){
+        return indexlistService.getboard( ino ); }
 
     // 4. 카테고리 등록
     @PostMapping("/setbcategory")
-    public boolean seticategory( @RequestBody IcategoryDto icategoryDto ){
+    public boolean setbcategory( @RequestBody IcategoryDto icategoryDto ){
         System.out.println( icategoryDto );
         return indexlistService.setbcategory( icategoryDto );
     }
+
     // 5. 모든 카테고리 출력
     @GetMapping("/icategorylist")
     public List<IcategoryDto> icategorylist(){
         return indexlistService.icategorylist();
     }
+
+    // 6. 게시물 삭제
+    @DeleteMapping("/delboard")
+    public boolean delboard( @RequestParam("ino") int ino ){ return indexlistService.delboard( ino ); }
+
+    // 7. 게시물 수정
+    @PutMapping("/upboard")
+    public boolean upboard( @RequestBody IndexDto indexDto ){ return indexlistService.upboard( indexDto );}
 
 
 

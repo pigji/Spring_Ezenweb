@@ -34,7 +34,7 @@ public class IndexlistService {
     @Transactional
     public boolean setboard( IndexDto indexDto ){
         // 선택한 카테고리 번호 --> 엔티티 검색
-        Optional<IndexcategoryEntity> optional = indexcategoryRepository.findById( indexDto.getIno() );
+        Optional<IndexcategoryEntity> optional = indexcategoryRepository.findById( indexDto.getIcno() );
         if( !optional.isPresent() ){ return false; }
         IndexcategoryEntity indexcategoryEntity = optional.get();
         //
@@ -95,6 +95,33 @@ public class IndexlistService {
         List<IcategoryDto> dtolist = new ArrayList<>();
         entityList.forEach( e -> dtolist.add( e.toDto()) );
         return dtolist;
+    }
+
+    // 6. 게시물 삭제
+    @Transactional
+    public boolean delboard( int ino ){
+        Optional<IndexlistEntity> optional = indexlistRepository.findById( ino );
+        if( optional.isPresent() ){
+            IndexlistEntity entity = optional.get();
+            indexlistRepository.delete( entity );   // 찾은 엔티티 삭제
+            return true;
+        } else { return false; }
+    }
+
+    // 7. 게시물 수정
+    @Transactional
+    public boolean upboard( IndexDto indexDto ){
+        // DTO에서 수정할 PK번호로 엔티티 찾기
+        Optional<IndexlistEntity> optional = indexlistRepository.findById( indexDto.getIno() );
+        //
+        if( optional.isPresent() ){
+            IndexlistEntity entity = optional.get();
+            // 수정처리
+            entity.setItitle( indexDto.getItitle() );
+            entity.setIcontent( indexDto.getIcontent() );
+            entity.setIfile( indexDto.getIfile() );
+            return true;
+        }else{ return false; }
     }
 
 

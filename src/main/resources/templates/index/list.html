@@ -6,16 +6,43 @@
 </head>
 <body>
 
+    <h1> 비회원제 게시판 </h1>
+
     <h3> 글목록 페이지 </h3>
     <div class="bcategorybox"></div>
 
     <table class="btable">
 
     </table>
+    <br><br>
+
+    <h3> 글쓰기 페이지 </h3>
+
+    <input type="text" class="icname"> <button type="button" onclick="setbcategory()">카테고리추가</button>
+    <div class="bcategorybox"></div>
+
+    <form>
+        작성자 : <input type="text" class="iname"><br>
+        제목 : <input type="text" class="ititle"><br>
+        내용 : <input type="text" class="icontent"><br>
+        첨부파일 : <input type="text" class="ifile">
+        <button type="button" onclick="setboard()">등록</button>
+    </form>
+
+
+<!--    <h3> 게시물 수정페이지 </h3>-->
+
+<!--    <form>-->
+<!--        제목 : <input type="text" class="ititle"><br>-->
+<!--        내용 : <input type="text" class="icontnet"><br>-->
+<!--        첨부파일 : <input type="text" class="ifile">-->
+<!--        <button type="button" onclick="upboard()"> 수정 </button>-->
+<!--    </form>-->
 
     <!-- 제이쿼리 최신버전 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="/js/index/list.js"></script>
+
 
 </body>
 </html>

@@ -5,25 +5,27 @@ let icno = 2;   // 카테고리 번호 기본값
 
 // 1. 게시물등록 버튼을 눌렀을때
 function setboard(){
-    let setboard = {
-        iname : document.querySelector('.iname').value,
-        ititle : document.querySelector('.ititle').value,
-        icontent : document.querySelector('.icontent').value,
-        ifile : document.querySelector('.ifile').value,
-        icno : icno
+    let data = {
+        iname : document.querySelector('.iname').value,     // 작성자
+        ititle : document.querySelector('.ititle').value,   // 제목
+        icontent : document.querySelector('.icontent').value,   // 내용
+        ifile : document.querySelector('.ifile').value,     // 첨부파일
+        icno : icno     // 카테고리 번호
     }
+    console.log(data)   // 확인
 
-    alert(setboard)
     $.ajax({
         url: "/index/setboard",
         type: "POST",
-        contentType: "application/json",
+        data : JSON.stringify(data),
+        contentType: "application/json",    // --> @RequestBody
         success: function( re ) {
-            alert( re )
+            alert( re ) // 성공여부 true, false
+
             // 글등록 성공하면 list 페이지로 이동
             if( re == true ){
                 alert("글작성 성공!!")
-                location.href="/index.list"
+                location.href="/index/list"
             }else{ alert("글작성 실패.."); }
         }
     })

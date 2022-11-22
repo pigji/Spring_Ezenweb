@@ -15,6 +15,8 @@ public class IndexDto {
     private String icontent;  // 게시물 내용
     private String ifile;     // 첨부파일
 
+    private int icno;         // 카테고리 번호
+
     // 형변환
     public IndexlistEntity toEntity() {
         return IndexlistEntity.builder()

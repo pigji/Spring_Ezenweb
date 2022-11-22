@@ -37,6 +37,7 @@ public class IndexlistEntity extends BaseEntity {
     // 연관관계 [ 카테고리번호[pk] <-- 양방향 --> 게시물번호[fk]
     @ManyToOne
     @JoinColumn(name="icno")
+    @ToString.Exclude
     private IndexcategoryEntity indexcategoryEntity;
 
     // 형변환
@@ -46,6 +47,7 @@ public class IndexlistEntity extends BaseEntity {
                 .iname( this.iname )
                 .ititle( this.ititle )
                 .icontent( this.icontent )
+                .ifile( this.ifile )
                 .build();
     }
 

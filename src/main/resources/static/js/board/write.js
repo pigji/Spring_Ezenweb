@@ -3,29 +3,53 @@
 // -------------- 전역변수 -----------------//
 let bcno = 2; // 카테고리 번호   // 카테고리 기본값
 
-// 1. 게시물 등록 버튼을 눌렀을때
+// 1. 게시물 등록 버튼을 눌렀을때 [ 일반전송 ]
+//function setboard(){
+//
+//    let data = {
+//        btitle : document.querySelector('.btitle').value,
+//        bcontent : document.querySelector('.bcontent').value,
+//        bfile : document.querySelector('.bfile').value,
+//        bcno : bcno
+//    }
+//
+//    $.ajax({    // http 사용하는 jquery 비동기통신 함수 [ 기본값 text/html ]
+//        url : "/board/setboard",
+//        type : "POST",
+//        data : JSON.stringify(data),
+//        contentType : "application/json",   // --> @RequestBody
+//        success : function( re ) {
+//            alert( re )
+//            // 만일 글등록을 성공하면 list페이지로 이동
+//            if( re == true ){
+//                alert("글작성 성공!!")
+//                location.href="/board/list"
+//            }
+//            else{ alert("글작성 실패.."); }
+//        }
+//    })
+//}
+
+// 1. 게시물 등록 메소드 [ 첨부파일 폼  전송 ]
 function setboard(){
 
-    let data = {
-        btitle : document.querySelector('.btitle').value,
-        bcontent : document.querySelector('.bcontent').value,
-        bfile : document.querySelector('.bfile').value,
-        bcno : bcno
-    }
-
-    $.ajax({
+    let boardform = document.querySelector('.boardform')
+    let formdata = new FormData(boardform);
+    formdata.set("bcno" , bcno )  // 폼 데이터에 카테고리 정보 추가
+                // "name" , data
+    $.ajax({  // http 사용하는 jquery 비동기통신 함수 [ 기본값 contentType : text/html ]
         url : "/board/setboard",
-        type : "POST",
-        data : JSON.stringify(data),
-        contentType : "application/json",   // --> @RequestBody
-        success : function( re ) {
-            alert( re )
-            // 만일 글등록을 성공하면 list페이지로 이동
-            if( re == true ){
-                alert("글작성 성공!!")
-                location.href="/board/list"
+        type : "post",          // Multipart 전송 방법1( 첨부파일 )
+        data : formdata ,
+        // Content-Type: multipart/formed-data  <-- 파일 첨부
+        contentType : false ,   // Multipart 전송 방법2( 첨부파일 )
+        processData : false ,   // Multipart 전송 방법3( 첨부파일 )
+        success : function(re) {
+            if( re == true){
+                alert('글작성성공');
+                location.href="/board/list";
             }
-            else{ alert("글작성 실패.."); }
+            else{ alert("글작성실패"); }
         }
     })
 }

@@ -1,4 +1,4 @@
-//alert("index 페이지")
+alert("index2 페이지")
 
 getloginMno();
 

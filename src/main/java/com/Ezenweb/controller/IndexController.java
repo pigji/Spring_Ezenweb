@@ -19,6 +19,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/index")   // 공통 URL
 public class IndexController {
+    /* 과제 - 비회원제게시판 */
 
     // 1. 전역변수
     @Autowired

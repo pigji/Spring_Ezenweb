@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/view.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index/view.html" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월22일화요일 비회원제 게시판만들기 [ 글등록/출력, 카테고리 등록/출력, 삭제하기 -&gt; 완료 , 수정하기 미완성 ]">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/react/MyButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/react/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/react/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/IndexDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/IndexDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/index/IndexlistEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/index/IndexlistEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/index/IndexlistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/index/IndexlistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index/write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669025956275</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="11월22일화요일 비회원제 게시판만들기 [ 글등록/출력, 카테고리 등록/출력, 삭제하기 -&gt; 완료 , 수정하기 미완성 ]">
+      <created>1669113994687</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669113994687</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +242,8 @@
     <MESSAGE value="11월18일금요일 회원제 게시판[ 글쓰기, 글목록, 글수정, 글삭제, 카테고리 ]" />
     <MESSAGE value="11월21일월요일 게시판 - 카테고리 등록, 전체출력, 카테고리별 게시판 출력" />
     <MESSAGE value="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]" />
-    <option name="LAST_COMMIT_MESSAGE" value="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]" />
+    <MESSAGE value="11월22일화요일 비회원제 게시판만들기 [ 글등록/출력, 카테고리 등록/출력, 삭제하기 -&gt; 완료 , 수정하기 미완성 ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="11월22일화요일 비회원제 게시판만들기 [ 글등록/출력, 카테고리 등록/출력, 삭제하기 -&gt; 완료 , 수정하기 미완성 ]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

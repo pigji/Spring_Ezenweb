@@ -159,6 +159,7 @@ function upboard( no ){
          }
     })
 }
+
 // 수정 내용 입력후 수정완료 버튼을 눌렀을때
 function upupboard( ){
 

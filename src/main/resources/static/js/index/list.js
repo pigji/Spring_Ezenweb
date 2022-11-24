@@ -152,8 +152,8 @@ function upboard( no ){
 
                             // 수정한 내용 저장
                             document.querySelector('.upititle').value = re.ititle
-                             document.querySelector('.upicontent').value = re.icontent
-                              document.querySelector('.upifile').value = re.ifile
+                            document.querySelector('.upicontent').value = re.icontent
+                            document.querySelector('.upifile').value = re.ifile
 
 
          }

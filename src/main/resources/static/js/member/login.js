@@ -13,6 +13,11 @@ function getmember(){
         type: "POST",
         data : JSON.stringify( info ),
         contentType: "application/json",
-        success: function(re){ alert( re ); }
+        success: function(re){
+            if( re == true ){
+                alert("로그인 성공!!")
+                location.href="/";  // 로그인 성공시 최상위 페이지로 이동
+            }else{ alert("로그인 실패.."); }
+         }
     })
 }

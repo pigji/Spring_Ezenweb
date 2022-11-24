@@ -18,8 +18,7 @@ public class BoardDto {
         // spring : MultipartFile
         // jsp : con 라이브러리
 
-
-    private int mno;            // 작성자[ 회원번호 - fk ]
+    private String bfilename;      // 첨부파일[ 호출용 ]
     private int bcno;            // 카테고리[ 카테고리 - fk ]
     private String memail;      // 회원아이디
 

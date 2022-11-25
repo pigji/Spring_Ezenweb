@@ -18,15 +18,13 @@
   <h5> O2O서비스 웹&앱개발 프로젝트 </h5> <br><br>
   
   <h2> :calendar: 일정 계획 :calendar: </h2>
-  <h3> 11월[ 4개월 ] </h3>
+  <h3> 11월[ 4개월 ] + 12월[ 5개월 ] </h3>
    SPRING / REACT <br> <br> 
-  <h3> 12월[ 5개월 ] </h3>
-   REACTNATIVE <br> <br> 
 
   <h2> :pushpin: 팀 프로젝트 :pushpin: </h2>
 
-  <h4> 11월[ 4개월 ]</h4>
-  ㅇㅇ
+  <h4> 11월[ 4개월 ] + 12월[ 5개월 ]</h4>
+  주제
   <br><br>
 </div>
 

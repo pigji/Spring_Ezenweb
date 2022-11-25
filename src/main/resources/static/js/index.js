@@ -20,7 +20,7 @@ function getloginMno(){
                     '<a href="/board/write"><button type="button"> 글쓰기 </button></a>'+
                     '<a href=""><button type="button" onclick="logout()"> 로그아웃 </button></a>'+
                     '<a href="/member/findpassword"><button type="button"> 비밀번호 찾기 </button></a>'+
-                    '<a href="/member/update"><button type="button"> 회원정보 수정 </button></a>'+
+                    '<a href="/member/setupdate"><button type="button"> 회원정보 수정 </button></a>'+
                     '<a href="/member/delete"><button type="button"> 회원탈퇴 </button></a>'
             }
             document.querySelector(".headerbox").innerHTML = headerbox;

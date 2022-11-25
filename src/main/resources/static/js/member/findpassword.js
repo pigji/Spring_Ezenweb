@@ -9,6 +9,9 @@ function findpassword(){
         url: "/member/getpassword",
         type: "get",
         data : { "memail" : memail } ,
-        success: function( re ){ alert(re) }
+        success: function( re ){
+            alert(re)
+            location.href="/";
+        }
     })
 }

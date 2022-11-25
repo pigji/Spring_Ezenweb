@@ -22,6 +22,9 @@ public class BoardDto {
     private int bcno;            // 카테고리[ 카테고리 - fk ]
     private String memail;      // 회원아이디
 
+    private int startbtn;
+    private int endbtn;
+
     // 1. 형변환
     public BoardEntity toEntity() {
         // * 생성자를 이용한 객체 생성 [ *빌더패던 비교 ]

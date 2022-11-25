@@ -20,6 +20,7 @@ function getboard( no ){
          success : function(re){
             console.log( re )
 
+                 var word3 = re.bfilename.substring(re.bfilename.lastIndexOf('_') + 1);
 
                  let html1 =  '<h3> 상세보기 </h3>'+
                                '제목 : <input type="text" class="bbtitle" readonly/><br>'+    // readonly/ : input 비활성화( 입력창 막기 )
@@ -31,7 +32,7 @@ function getboard( no ){
                                //
                                document.querySelector('.bbtitle').value = re.btitle
                                document.querySelector('.bbtcontent').value = re.bcontent
-                               document.querySelector('.bbtfilename').value = re.bfilename
+                               document.querySelector('.bbtfilename').value = word3
 
          }
      })

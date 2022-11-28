@@ -1,0 +1,35 @@
+/* p.167 css 형식으로 작성  --> 순수 css 작성 */
+.wrapper{
+    margin : 8px;   /* 바깥여백 */
+    padding : 8px;  /* 안쪽여백  */
+    display : flex; /* 하위 태그 가로배치 */
+    /* flex-direction : row;    row : 기본값 */
+    border : solid 1px grey;   /* 테두리  */
+    border-radius : 16px; /* 둥근모서리 */
+}
+
+.imgContainer{}
+
+.image{
+    width : 50px;   /* 가로길이 */
+    height : 50px;  /* 세로길이 */
+    border-radius : 25px;   /* 둥근모서리 */
+}
+
+.contentContainer{
+    margin-left : 8px;
+    display : flex;
+    flex-direction : column;    /* 세로배치 */
+    justify-content : center;
+}
+
+.nameText{
+    color : black;
+    font-size : 16px;
+    font-weight : bold;
+}
+
+.commentText{
+    color : black;
+    font-size : 16px;
+}

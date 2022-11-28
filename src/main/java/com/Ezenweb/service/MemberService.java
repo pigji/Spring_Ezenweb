@@ -53,24 +53,24 @@ public class MemberService {
         return entity.getMno();
     }
     // 2. 로그인
-    public int getmember(MemberDto memberDto ){
-        // 1. Dao 처리 [ select ]
-            // 1. 모든 엔티티=레코드 호출 [ select * from member ]
-        List<MemberEntity> entityList = memberRepository.findAll();
-            // 2. 입력받은 데이터와 일치값 찾기
-        for( MemberEntity entity : entityList ){ // 리스트 반복
-            if( entity.getMemail().equals(memberDto.getMemail())){ // 엔티티 = 레코드 의 이메일 과 입력받은 이메일
-                if( entity.getMpassword().equals(memberDto.getMpassword())){ // 엔티티 = 레코드 의 비밀번호 와 입력받은 비밀번호
-                    // 세션 부여[ 로그인 성공시 'loginMno' 라는 이름으로 회원번호 세션 저장 ]
-                    request.getSession().setAttribute( "loginMno", entity.getMno() );
-                    return 1;// 로그인 성공했다.
-                }else{
-                    return 2; // 비밀번호 틀림
-                }
-            }
-        }
-        return 0; // 아이디가 틀림
-    }
+//    public int getmember(MemberDto memberDto ){
+//        // 1. Dao 처리 [ select ]
+//            // 1. 모든 엔티티=레코드 호출 [ select * from member ]
+//        List<MemberEntity> entityList = memberRepository.findAll();
+//            // 2. 입력받은 데이터와 일치값 찾기
+//        for( MemberEntity entity : entityList ){ // 리스트 반복
+//            if( entity.getMemail().equals(memberDto.getMemail())){ // 엔티티 = 레코드 의 이메일 과 입력받은 이메일
+//                if( entity.getMpassword().equals(memberDto.getMpassword())){ // 엔티티 = 레코드 의 비밀번호 와 입력받은 비밀번호
+//                    // 세션 부여[ 로그인 성공시 'loginMno' 라는 이름으로 회원번호 세션 저장 ]
+//                    request.getSession().setAttribute( "loginMno", entity.getMno() );
+//                    return 1;// 로그인 성공했다.
+//                }else{
+//                    return 2; // 비밀번호 틀림
+//                }
+//            }
+//        }
+//        return 0; // 아이디가 틀림
+//    }
     // 3. 비밀번호찾기
     public String getpassword( String memail ){
         // 1. 모든 레코드/엔티티 꺼내온다.

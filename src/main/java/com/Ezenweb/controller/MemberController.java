@@ -42,7 +42,7 @@ public class MemberController {
         int result = memberService.setmember( memberDto ); // 1. 서비스[ 비지니스 로직 ] 호출
         return result;  // 2. 반환
     }
-//    @PostMapping("/getmember")  // 2. 로그인 기능
+//    @PostMapping("/getmember")  // 2. 로그인 기능[ 시큐리티 사용시 필요없음 ]
 //    public int getmember( @RequestBody MemberDto memberDto ){
 //        int result = memberService.getmember( memberDto );
 //        return result;
@@ -65,17 +65,18 @@ public class MemberController {
         return result;
     }
 
-    @GetMapping("/getloginMno")     // 6. 로그인 여부 판단
-    public int getloginMno(){
-        int result = memberService.getloginMno();
+    @GetMapping("/getloginMno") // 6. 로그인 정보 확인
+    public String getloginMno(){
+        String result = memberService.getloginMno();
         return result;
     }
-    @GetMapping("/logout")      // 7. 로그아웃
-    public boolean logout(){
-        //System.out.println("test");
-        boolean result = memberService.logout();
-        return result;
-    }
+
+//    @GetMapping("/logout")      // 7. 로그아웃
+//    public boolean logout(){
+//        //System.out.println("test");
+//        boolean result = memberService.logout();
+//        return result;
+//    }
 
     @GetMapping("/list")        // 8. 회원목록
     @ResponseBody
@@ -87,7 +88,7 @@ public class MemberController {
 
     @GetMapping("/getauth")     // 9. 이메일 인증
     public String gotauth(  ){
-        return memberService.getauth( "이메일주소입력" );
+        return memberService.getauth( "이메일주소 입력" );
         // return "1234"
     }
 

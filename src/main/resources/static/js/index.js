@@ -10,15 +10,15 @@ function getloginMno(){
         success: function( re ) {
             //alert( re )
             let headerbox = '';
+            //alert( re )
 
-            if( re == "0" ){    // 로그인 안했을 경우
-                headerbox =
+            if( re == "" ){    // 로그인 안했을 경우
+                headerbox +=
                             '<a href="/member/signup"><button type="button"> 회원가입 </button></a>'+
                             '<a href="/member/login"><button type="button"> 로그인 </button></a>'
             }else{  // 로그인 했을 경우
-                headerbox =
-                    '<a href="/board/write"><button type="button"> 글쓰기 </button></a>'+
-                    '<a href=""><button type="button" onclick="logout()"> 로그아웃 </button></a>'+
+                headerbox +=
+                    '<a href="/member/logout"><button type="button"> 로그아웃 </button></a>'+
                     '<a href="/member/findpassword"><button type="button"> 비밀번호 찾기 </button></a>'+
                     '<a href="/member/setupdate"><button type="button"> 회원정보 수정 </button></a>'+
                     '<a href="/member/delete"><button type="button"> 회원탈퇴 </button></a>'
@@ -29,24 +29,24 @@ function getloginMno(){
 }
 
 /* 로그아웃 버튼을 눌렀을때 [ 서버에 있는 세션을 초기화 ] */
-function logout(){
-    alert("로그아웃 버튼 누름")
-    $.ajax({
-        url: "/member/logout",      // 요청 URL
-        type: "get",                // 요청 메소드
-        success: function( re ){    // 응답
-            alert( re )
-            if( re == true ){       // 로그아웃 성공했을때
-                alert("로그아웃 성공")
-                location.href = "/"  // index.html 반환해주는 매핑 주소
-                       // location.href = URL 주소 값
-            }else{
-                alert("로그아웃 실패..")
-            }
-        }
-
-    })
-}
+//function logout(){
+//    alert("로그아웃 버튼 누름")
+//    $.ajax({
+//        url: "/member/logout",      // 요청 URL
+//        type: "get",                // 요청 메소드
+//        success: function( re ){    // 응답
+//            alert( re )
+//            if( re == true ){       // 로그아웃 성공했을때
+//                alert("로그아웃 성공")
+//                location.href = "/"  // index.html 반환해주는 매핑 주소
+//                       // location.href = URL 주소 값
+//            }else{
+//                alert("로그아웃 실패..")
+//            }
+//        }
+//
+//    })
+//}
 
 /* 회원목록 가져오기 */
 list()

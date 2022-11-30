@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월25일금요일 카테고리별 + 검색별 페이징처리">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/chapter5/Comment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/chapter5/Comment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/chapter5/CommentList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/chapter5/ex1.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="11월28일월요일 댓글 컴포넌트, 회원가입 api와 axios, spring 시큐리티">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/MemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/member/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/member/MemberEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/member/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/member/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/member/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,18 +52,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/504/OneDrive/바탕 화면/SpringWeb/Spring_Ezenweb/src/main/resources/templates/DB",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/504/OneDrive/바탕 화면/SpringWeb/Spring_Ezenweb/src/main/resources/templates/DB&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\504\OneDrive\바탕 화면\SpringWeb\Spring_Ezenweb\src\main\resources\templates\DB" />
@@ -80,7 +74,7 @@
       <recent name="C:\Users\504\Desktop\springweb\Ezenweb\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.WebStart">
+  <component name="RunManager" selected="Application.WebStart">
     <configuration name="테스트" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.Ezenweb.ConsoleStart" />
       <module name="Ezenweb.main" />
@@ -109,8 +103,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="애플리케이션.WebStart" />
-      <item itemvalue="애플리케이션.테스트" />
+      <item itemvalue="Application.WebStart" />
+      <item itemvalue="Application.테스트" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -269,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669364583142</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="11월28일월요일 댓글 컴포넌트, 회원가입 api와 axios, spring 시큐리티">
+      <created>1669623997872</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669623997872</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,7 +302,8 @@
     <MESSAGE value="11월23일수요일 비회원제게시판 만들기[ 글등록/출력, 카테고리 등록/출력, 삭제, 수정 --&gt; 완료 ], 첨부파일 미완성" />
     <MESSAGE value="11월24일목요일 첨부파일 수정, 삭제, 링크걸기" />
     <MESSAGE value="11월25일금요일 카테고리별 + 검색별 페이징처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="11월25일금요일 카테고리별 + 검색별 페이징처리" />
+    <MESSAGE value="11월28일월요일 댓글 컴포넌트, 회원가입 api와 axios, spring 시큐리티" />
+    <option name="LAST_COMMIT_MESSAGE" value="11월28일월요일 댓글 컴포넌트, 회원가입 api와 axios, spring 시큐리티" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

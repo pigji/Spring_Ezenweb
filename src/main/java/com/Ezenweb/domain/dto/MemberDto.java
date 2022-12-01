@@ -4,25 +4,28 @@ import com.Ezenweb.domain.entity.member.MemberEntity;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter @ToString @Builder
 
-public class MemberDto implements UserDetails {
+public class MemberDto implements UserDetails, OAuth2User {
 
     private int mno;
     private String memail;
     private String mpassword;
     private String mphone;
-    private Set<GrantedAuthority> authorities;  // 인증 권한 [토큰]
-            // GrantedAuthority : 권한[ 토큰 ]
+    private Set<GrantedAuthority> authorities; // 인증 권한 [토큰]
+    // GrantedAuthority : 권한[토큰]
+    private Map<String, Object> attributes; // oauth2 인증 결과
 
     // * dto ---> entity 변환
-    public MemberEntity toEntity() {
+    public MemberEntity toEntity(){
         return MemberEntity.builder()
                 .mno(this.mno)
                 .memail(this.memail)
@@ -30,8 +33,7 @@ public class MemberDto implements UserDetails {
                 .mphone(this.mphone)
                 .build();
     }
-
-    public void setAuthorities(Set<GrantedAuthority> authorities) {     // 권한 반환
+    public void setAuthorities(Set<GrantedAuthority> authorities) {
         this.authorities = authorities;
     }
 
@@ -41,13 +43,13 @@ public class MemberDto implements UserDetails {
     }
 
     @Override
-    public String getPassword() {   // 비밀번호 반환
+    public String getPassword() {
         return this.mpassword;
     }
 
     @Override
-    public String getUsername() {   // 아이디 = memail 반환
-        return memail;
+    public String getUsername() {
+        return this.memail;
     }
 
     @Override
@@ -69,6 +71,19 @@ public class MemberDto implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
+    //
+    @Override
+    public String getName() {
+        return this.memail;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return this.attributes;
+    }
+
 } // class end
 
 

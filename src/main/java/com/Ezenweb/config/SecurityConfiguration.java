@@ -35,20 +35,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .failureUrl("/member/login")  // 로그인 실패시 이동할 URL
                     .usernameParameter("memail")     // 아이디 변수명
                     .passwordParameter("mpassword") // 비밀번호 변수명
-                .and() // 기능 구분
-                    .oauth2Login() // 소셜 로그인 보안 설정
-                        .userInfoEndpoint() // Endpoint(종착점) : 소셜 회원정보 들어오는곳
-                        .userService( memberService ) // 해당 서비스  loadUser 메소드 구현
+
                 .and() // 구분 기능
                     .logout()   // 로그아웃 보안설정
                         .logoutRequestMatcher( new AntPathRequestMatcher("/member/logout")) // 로그아웃 처리할 URL 정의
                         .logoutSuccessUrl("/") // 로그아웃 성공했을때 이동할 URL[ 메인페이지 ]
                         .invalidateHttpSession( true )  // 세션 초기화 여부 --> [ principal 초기화 ]
+
                 .and() // 기능 구분
                     .csrf() // 요청 위조
                     .ignoringAntMatchers("/member/getmember")   // 로그인 post 사용  // 해당 URL 요청 방지 해지
-                    .ignoringAntMatchers("/member/setmember");  // 회원가입 post 사용
+                    .ignoringAntMatchers("/member/setmember")  // 회원가입 post 사용
 
+                .and() // 기능 구분
+                     .oauth2Login() // 소셜 로그인 보안 설정
+                     .userInfoEndpoint() // Endpoint(종착점) : 소셜 회원정보 들어오는곳
+                     .userService( memberService ); // 해당 서비스  loadUser 메소드 구현
     }
 } // class end
 /*

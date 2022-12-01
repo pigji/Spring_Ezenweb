@@ -8,7 +8,7 @@ function getloginMno(){
         url: "/member/getloginMno",
         type: "get",
         success: function( re ) {
-            //alert( re )
+            alert( re );
             let headerbox = '';
             //alert( re )
 

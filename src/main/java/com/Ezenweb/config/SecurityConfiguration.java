@@ -49,10 +49,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
                 .and() // 기능 구분
                      .oauth2Login() // 소셜 로그인 보안 설정
+                    .defaultSuccessUrl("/") // 소셜 로그인 성공시 이동하는 URL
                      .userInfoEndpoint() // Endpoint(종착점) : 소셜 회원정보 들어오는곳
                      .userService( memberService ); // 해당 서비스  loadUser 메소드 구현
     }
 } // class end
+
 /*
     시큐리티 사용방법
         // 1. 그레이들 의존성 추가
@@ -78,6 +80,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             // WebSecurityConfigurerAdapter : 웹 시큐리티 설정 클래스
                   // 설정 종류
                       // 1. URL 권한
-
 
  */

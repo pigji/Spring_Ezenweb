@@ -60,23 +60,40 @@ public class MemberService
             System.out.println( "4. 회원정보 담긴 객체명  : " + oauth2UserInfo );
             System.out.println( "5. 인증결과 : " + oAuth2User.getAttributes() );
 
-        /*
-            kakao_account = { }
-        */
-
         // 4. Dto 처리
         OauthDto oauthDto = OauthDto.of( registrationId , oauth2UserInfo , oAuth2User.getAttributes() );
-            // 권한부여
-            Set<GrantedAuthority> authorities   = new HashSet<>();
-            authorities.add( new SimpleGrantedAuthority( "kakaoUser") );
+
+        // *. Db 처리
+        // 1. 이메일로 엔티티 검색 [ 가입  or 기존회원 구분 ]
+        Optional< MemberEntity > optional
+                = memberRepository.findByMemail( oauthDto.getMemail() );
+
+        MemberEntity memberEntity = null; //
+        if( optional.isPresent() ) { // 기존회원이면 // Optional 클래스 [ null 예외처리 방지 ]
+
+            // 이메일이 존재하면서 소셜 클라이언트도 동일하면
+            if( optional.get().getMrol().equals( registrationId )){
+                memberEntity = optional.get();
+            }else{  // 이메일은 같지만 소셜 클라이언트는 다르다.
+                memberEntity = memberRepository.save( oauthDto.toEntity() );
+            }
+        }else{ // 기존회원이 아니면 [ 가입 ]
+            memberEntity = memberRepository.save( oauthDto.toEntity() );
+        }
+            System.out.println( "확인1 : "+ memberEntity );
+
+        // * 권한부여
+        Set<GrantedAuthority> authorities   = new HashSet<>();
+        authorities.add( new SimpleGrantedAuthority( memberEntity.getMrol() ) );
 
         // 5. 반환 MemberDto[ 일반회원 vs oauth : 통합회원 - loginDto ]
         MemberDto memberDto = new MemberDto();
-            memberDto.setMemail( oauthDto.getMemail() );
-            memberDto.setAuthorities( authorities );
-            memberDto.setAttributes( oauthDto.getAttributes() );
+        memberDto.setMemail( memberEntity.getMemail() );
+        memberDto.setAuthorities( authorities );
+        memberDto.setAttributes( oauthDto.getAttributes() );
         return memberDto;
     }
+
 
     // --------------------- 전역 객체 ----------------------------
     @Autowired
@@ -146,8 +163,7 @@ public class MemberService
         //System.out.println( "username : " + username );
 
         // 1. 입력받은 아이디 [ memail ] 로 엔티티 찾기
-         MemberEntity memberEntity = memberRepository
-                .findByMemail( memail )
+         MemberEntity memberEntity = memberRepository.findByMemail( memail )
                 .orElseThrow( ()-> new UsernameNotFoundException("사용자가 존재하지 않습니다.") );
                 // .orElseThrow : 검색 결과가 없으면 화살표함수[람다식]를 이용한
 

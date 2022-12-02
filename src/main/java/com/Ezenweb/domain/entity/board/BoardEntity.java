@@ -40,7 +40,7 @@ public class BoardEntity extends BaseEntity {
     // 연관관계2 [ 카테고리번호[pk] <-- 양방향 --> 게시물번호[fk]
     @ManyToOne  // [ 1:n ] fk 에 해당 어느테이션
     @JoinColumn( name="bcno" )
-    @ToString.Exclude
+    @ToString.Exclude // 해당 필드는 ToString()에서 사용하지 않는다. [ 양방향일때는 필수!!! ]
     private BcategoryEntity bcategoryEntity;
 
     // 작성일,수정일 -> 상속( 여러 엔티티해서 사용되는 필드라서 BaseEntity )

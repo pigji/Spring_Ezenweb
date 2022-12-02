@@ -12,7 +12,8 @@
 // 1.
 import React from 'react';  // 필수
 // ** CSS 파일 가져오기
-import styles from './Comment.css';
+import styles from './Comment.css'; // * css 파일 import 하기
+import logo from '../../logo.svg';
 
 // 2.
 function Comment( props ) {

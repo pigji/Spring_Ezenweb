@@ -1,0 +1,14 @@
+
+/* Notification 컴포넌트 */
+.wrapper{
+    margin-top: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row; /* 기본값 */
+    border: solid 1px grey;
+    border-radius:16px; /* 둥근모서리 */
+}
+.messageText{
+    color: black;
+    font-size: 16px;
+}

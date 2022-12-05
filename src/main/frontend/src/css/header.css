@@ -1,3 +1,23 @@
-.header_name{ color: red; }
+ul{ list-style-type: none; }
+a{
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+.logo{ width: 150px; }
 
-.logo{ width: 100px; }
+/* 웹 가로사이즈 */
+.webbox{
+    width: 1000px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.top_menu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.top_menu li{ margin-left: 20px}

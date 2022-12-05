@@ -10,15 +10,18 @@
         // 3. export default 컴포넌트명
             // 2+3. export default function 컴포넌트명(){ return( 렌더링할 코드 ); }
 
-// 1.
+// 1. jsx 파일 불러오기 [ /해당 컴포넌트 선언 ]
 import React from 'react';
 import Header from './Header';
+import Home from './Home';
 import Footer from './Footer';
 import Signup from './member/Signup';
+import Login from './member/Login';
+import BoardList from './board/BoardList';
 // 라우터 설치[ 터미널 ] : npm i react-router-dom   ==  npm install react-router-dom    // i는 install 약자
 // import { 컴포넌트명 } from 'react-router-dom';    // 6버전
 import { HashRouter, BrowserRouter, Routes, Route, Link, Router } from "react-router-dom";
-    // BrowserRouter :
+    // BrowserRouter : 가상 URL
     // vs HashRouter :
     // Routes : Route 목록/리스트
     // Route : 가상 URL 생성 --> 해당 URL 에 따른 컴포넌트 렌더링 [ SPA ]
@@ -29,15 +32,16 @@ import { HashRouter, BrowserRouter, Routes, Route, Link, Router } from "react-ro
 // 2.
 export default function Index( props ){
     return(
-        <div>
+        <div className="webbox">
             <BrowserRouter>
                 <Header/>
-                        <h3>메인페이지</h3>
+                        <Routes>
+                            <Route path="/" element = { <Home />} />
+                            <Route path="/member/signup" element={ <Signup/> } />
+                            <Route path="/member/login" element={ <Login/> } />
+                            <Route path="/board/list" element={ <BoardList/> } />
+                        </Routes>
                 <Footer/>
-                <Routes>
-                    <Route path="/" />
-                    <Route path="/member/signup" element={ <Signup/> } />
-                </Routes>
             </BrowserRouter>
         </div>
     );

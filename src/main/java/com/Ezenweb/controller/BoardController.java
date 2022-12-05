@@ -25,7 +25,8 @@ public class BoardController {
     @Autowired // 의존성 주입
     private BoardService boardService = new BoardService();
 
-    //------------------ 2. 페이지 요청 로드[ view ] --------------------//
+    //------------- 2. 페이지 요청 로드[ view ] --> 리액트 사용시 사라짐. --------------------//
+/*
     // 1. 게시물목록 페이지 열기
     @GetMapping("/list")     // URL : http://localhost:8080/board/list 요청시 해당 html 반환
     public Resource getlist(){ return new ClassPathResource("templates/board/list.html"); }
@@ -38,6 +39,7 @@ public class BoardController {
     // 4. 게시물수정 페이지 열기
     @GetMapping("/update")   // URL : http://localhost:8080/board/update 요청시 해당 html 반환
     public Resource getupdate(){ return new ClassPathResource("templates/board/update.html"); }
+*/
 
     //------------------ 3. 요청과 응답 처리[ model ] --------------------//
         // 1.  HTTP 요청 메소드 매핑 : @PostMapping, @GetMapping, @DeleteMapping, @PutMapping

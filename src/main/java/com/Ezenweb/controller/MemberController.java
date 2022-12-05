@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")  // 요청 포트 변경 어노테이션
+//@CrossOrigin(origins = "http://localhost:3000")  // 요청 포트 변경 어노테이션
 @RestController // Restful api 사용하는 controller 명시 + @ResponseBody
 @RequestMapping("/member") // 공통 URL 매핑 주소
 public class MemberController {
@@ -19,7 +19,8 @@ public class MemberController {
     @Autowired // 스프링 컨테이너 빈 생성 [ 외부에 메모리 위임 ]
     private MemberService memberService; // 서비스 객체 생성
 
-    // --------------------------------- HTML 반환 매핑 [ URL 주소 값 ] ---------------------------------- //
+    // -------------------- HTML 반환 매핑 [ URL 주소 값 ] --> 리액트 사용시 사라짐.  ---------------------------------- //
+/*
     @GetMapping("/signup")  // 프로젝트내 resource -> templates -> member -> signup.html 반환
     public Resource getsignup(){ return new ClassPathResource("templates/member/signup.html");    }
     @GetMapping("/login")
@@ -34,6 +35,7 @@ public class MemberController {
     public Resource getdelete(){ return new ClassPathResource("templates/member/delete.html");}
     @GetMapping("/update")
     public Resource getupdate(){ return new ClassPathResource("templates/member/update.html");}
+*/
 
     // --------------------------------- 서비스/기능 매핑 ------------------------------------- //
 

@@ -8,10 +8,11 @@ import Signup from './component/member/Signup'
 import Index from './component/Index' // ** 프로젝트
 
 // 1. 사용할 컴포넌트 호출   // [ import 컴포넌트명 from 파일명 ]
-import Library from './Book/chapter3/Library'
-import Clock from './Book/chapter4/Clock'
-import CommentList from './Book/chapter5/CommentList'
-import NotificationList from './Book/chapter6/NotificationList'
+import Library from './Book/chapter3/Library'   // 3장
+import Clock from './Book/chapter4/Clock'       // 4장
+import CommentList from './Book/chapter5/CommentList'   // 5장
+import NotificationList from './Book/chapter6/NotificationList' // 6장
+import Counter from './Book/chapter7/Ex1_Hook' // 6장
 
 // 2. DOM 컨테이너 [ 'root' 는 public --> index.html 안에 있는 태그 ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -68,6 +69,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //               <NotificationList />
 //               </React.StrictMode>
 //        );
+
+      // 7.
+//       root.render(
+//         <React.StrictMode>
+//           <Counter />
+//         </React.StrictMode>
+//       );
 
 
 

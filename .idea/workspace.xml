@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월5일월요일 리액트_state와 생명주기">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/setProxy.js" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월5일월요일 SPRING CONTROLLER HTML 반환 API 주석처리">
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter7/Ex1_Hook.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter6/NotificationList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter6/NotificationList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/IndexController2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/MemberController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670216295484</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="12월5일월요일 SPRING CONTROLLER HTML 반환 API 주석처리">
+      <created>1670222947655</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670222947655</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,7 +348,8 @@
     <MESSAGE value="12월1일목요일 소셜로그인 [ 카카오, 네이버, 구글 ]" />
     <MESSAGE value="12월2일금요일 oauth DB처리" />
     <MESSAGE value="12월5일월요일 리액트_state와 생명주기" />
-    <option name="LAST_COMMIT_MESSAGE" value="12월5일월요일 리액트_state와 생명주기" />
+    <MESSAGE value="12월5일월요일 SPRING CONTROLLER HTML 반환 API 주석처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="12월5일월요일 SPRING CONTROLLER HTML 반환 API 주석처리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -35,11 +35,11 @@ class NotificationList extends React.Component{
     }
 
     /* 추가코드 작성  NotificationList 컴포넌트 사망시[끝났을떼] timer 함수 종료 */
-    componentWillUnmount(){
-        if( timer ){    // timer 변수에 setInterval 함수가 있으면 true
-            clearInterval( timer ); // setInterval 종료
-        }
-    }
+//    componentWillUnmount(){
+//        if( timer ){    // timer 변수에 setInterval 함수가 있으면 true
+//            clearInterval( timer ); // setInterval 종료
+//        }
+//    }
 
     // 3. 함수2
     render(){

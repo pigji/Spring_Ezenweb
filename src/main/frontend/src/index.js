@@ -12,7 +12,8 @@ import Library from './Book/chapter3/Library'   // 3장
 import Clock from './Book/chapter4/Clock'       // 4장
 import CommentList from './Book/chapter5/CommentList'   // 5장
 import NotificationList from './Book/chapter6/NotificationList' // 6장
-import Counter from './Book/chapter7/Ex1_Hook' // 6장
+import Counter from './Book/chapter7/Ex1_Hook' // 7장
+import Accommodate from './Book/chapter7/Accommodate' // 7장
 
 // 2. DOM 컨테이너 [ 'root' 는 public --> index.html 안에 있는 태그 ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -70,10 +71,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //               </React.StrictMode>
 //        );
 
-      // 7.
+      // 7. ex1
 //       root.render(
 //         <React.StrictMode>
 //           <Counter />
+//         </React.StrictMode>
+//       );
+
+        // 7. 실습
+//       root.render(
+//         <React.StrictMode>
+//           <Accommodate />
 //         </React.StrictMode>
 //       );
 

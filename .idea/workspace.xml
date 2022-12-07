@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월6일화요일 로그인상태 표시">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter7/Accommodate.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter7/Ex2_Hook.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter7/useCounter.jsx" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월7일수요일 React_7장 Hook 실습">
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardWrite.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/WebConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter7/Ex1_Hook.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter7/Ex1_Hook.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670309135034</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="12월7일수요일 React_7장 Hook 실습">
+      <created>1670387646374</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670387646374</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +349,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11월10일목요일 [ POST API, PUT API, DELETE API ]" />
     <MESSAGE value="11월11일금요일 DAO사용해서 글쓰기, 글목록 콘솔창 출력" />
     <MESSAGE value="11월14일월요일 [ Dao 사용 없이 출력 ]" />
     <MESSAGE value="11월15일화요일 [ index페이지, 회원가입, 로그인, 비밀번호 찾기, 회원수정, 로그아웃, 탈퇴하기, 로그인여부 판단 ]" />
@@ -365,7 +373,8 @@
     <MESSAGE value="12월5일월요일 SPRING CONTROLLER HTML 반환 API 주석처리" />
     <MESSAGE value="12월6일화요일 Hook" />
     <MESSAGE value="12월6일화요일 로그인상태 표시" />
-    <option name="LAST_COMMIT_MESSAGE" value="12월6일화요일 로그인상태 표시" />
+    <MESSAGE value="12월7일수요일 React_7장 Hook 실습" />
+    <option name="LAST_COMMIT_MESSAGE" value="12월7일수요일 React_7장 Hook 실습" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

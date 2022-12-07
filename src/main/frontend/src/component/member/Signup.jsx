@@ -2,20 +2,27 @@ import React from 'react';
 import styles from './signup.css';
 import axios from 'axios'; //   npm install axios 설치 했을경우만 가능
 
-function Signup( props ){
-
-    const setmember = () => {  // 1. setmember 이벤트 함수 정의 [ 화살표함수 정의 ]
-
+function Signup( props ){   // * 회원가입 컴포넌트 *
+    // 1. setmember 이벤트 함수 정의 [ 화살표함수 정의 ]
+    const setmember = () => {
         let info = {    // 2. 입력받은 값 가져오기
             memail : document.querySelector('.memail').value ,
             mpassword : document.querySelector('.mpassword').value ,
             mphone : document.querySelector('.mphone').value
         }
 
-        //  @CrossOrigin(origins = "http://localhost:3000")
+        // @CrossOrigin(origins = "http://localhost:3000")
         axios           // 3. axios 비동기통신 이용한 서버[spring] 통신
-            .post( "http://localhost:8080/member/setmember" ,  info ) // 요청
-            .then( res => { alert( res.data ) } )                    // 응답
+            .post( "http://localhost:8080/member/setmember" ,  info )   // 요청메소드 ( rul , data )
+            .then( res => { // 응답
+               let result = res.data ;
+               if( result != 0 ){ // 회원가입 성공
+                       alert('회원가입 성공')
+               }else{ // 회원가입 실패
+                        alert('회원가입 실패')
+               }
+            } )
+            .catch( err => { console.log( err ) } )  // 예외처리
 
     }
     // 2. 인증코드 요청 함수

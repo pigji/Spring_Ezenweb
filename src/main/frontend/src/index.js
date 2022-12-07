@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Signup from './component/member/Signup'
 import Index from './component/Index' // ** 프로젝트
 
 // 1. 사용할 컴포넌트 호출   // [ import 컴포넌트명 from 파일명 ]

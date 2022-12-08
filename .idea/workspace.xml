@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월7일수요일 React_7장 Hook 실습">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardWrite.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/WebConfiguration.java" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월7일수요일 Spring_React 글쓰기 컴포넌트">
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/BookList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter8/ConfirmButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter8/ConfirmButton2.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter8/Ex1_Event.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter8/TestState.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter9/LandingPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter9/Toolbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter9/Toolbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/css/booklist.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/member/Signup.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +75,7 @@
       <recent name="C:\Users\504\OneDrive\바탕 화면\SpringWeb\Spring_Ezenweb\src\main\resources\templates\DB" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\504\OneDrive\바탕 화면\SpringWeb\Spring_Ezenweb\src\main\frontend\src\Book\chapter9" />
       <recent name="C:\Users\504\OneDrive\바탕 화면\SpringWeb\Spring_Ezenweb\src\main\frontend\src\Book" />
       <recent name="C:\Users\504\Desktop\springweb\Ezenweb\src\main\resources\templates" />
       <recent name="C:\Users\504\Desktop\springweb\Ezenweb\src\main\resources\static\js" />
@@ -334,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670387646374</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="12월7일수요일 Spring_React 글쓰기 컴포넌트">
+      <created>1670394460800</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670394460800</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,7 +363,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11월11일금요일 DAO사용해서 글쓰기, 글목록 콘솔창 출력" />
     <MESSAGE value="11월14일월요일 [ Dao 사용 없이 출력 ]" />
     <MESSAGE value="11월15일화요일 [ index페이지, 회원가입, 로그인, 비밀번호 찾기, 회원수정, 로그아웃, 탈퇴하기, 로그인여부 판단 ]" />
     <MESSAGE value="11월16일수요일 회원목록 출력, SMTP" />
@@ -374,7 +387,8 @@
     <MESSAGE value="12월6일화요일 Hook" />
     <MESSAGE value="12월6일화요일 로그인상태 표시" />
     <MESSAGE value="12월7일수요일 React_7장 Hook 실습" />
-    <option name="LAST_COMMIT_MESSAGE" value="12월7일수요일 React_7장 Hook 실습" />
+    <MESSAGE value="12월7일수요일 Spring_React 글쓰기 컴포넌트" />
+    <option name="LAST_COMMIT_MESSAGE" value="12월7일수요일 Spring_React 글쓰기 컴포넌트" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

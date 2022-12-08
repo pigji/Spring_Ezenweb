@@ -13,6 +13,11 @@ import CommentList from './Book/chapter5/CommentList'   // 5장
 import NotificationList from './Book/chapter6/NotificationList' // 6장
 import Counter from './Book/chapter7/Ex1_Hook' // 7장
 import Accommodate from './Book/chapter7/Accommodate' // 7장
+import ConfirmButton from './Book/chapter8/ConfirmButton' // 8장 [ 클래스형 ]
+import ConfirmButton2 from './Book/chapter8/ConfirmButton2' // 8장 [ 함수형 ]
+import TestState from './Book/chapter8/TestState' // 8장 [ setState vs prevState 비교 ]
+import LandingPage from './Book/chapter9/LandingPage' // 9장
+
 
 // 2. DOM 컨테이너 [ 'root' 는 public --> index.html 안에 있는 태그 ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -81,6 +86,32 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //       root.render(
 //         <React.StrictMode>
 //           <Accommodate />
+//         </React.StrictMode>
+//       );
+
+        // 8. 실습
+//       root.render(
+//         <React.StrictMode>
+//           <ConfirmButton />
+//         </React.StrictMode>
+//       );
+        // 8. 실습 [ 함수형 코드 작성 ]
+//       root.render(
+//         <React.StrictMode>
+//           <ConfirmButton2 />
+//         </React.StrictMode>
+//       );
+        // 8. 테스트 [ setState vs prevState 비교 ]
+//       root.render(
+//         <React.StrictMode>
+//           <TestState />
+//         </React.StrictMode>
+//       );
+
+        // 9. 실습 [ p.279 ]
+//       root.render(
+//         <React.StrictMode>
+//           <LandingPage />
 //         </React.StrictMode>
 //       );
 

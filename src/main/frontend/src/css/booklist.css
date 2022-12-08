@@ -1,0 +1,7 @@
+.list{
+    display: flex;
+    justify-content: row;
+}
+.list li{
+    margin : 20px;
+}

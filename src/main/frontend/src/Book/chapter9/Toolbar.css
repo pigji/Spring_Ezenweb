@@ -1,0 +1,10 @@
+
+.wrapper{
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px gray;
+}
+.greeting{
+    margin-right: 8px;
+}

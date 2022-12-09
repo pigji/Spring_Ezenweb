@@ -105,15 +105,21 @@ public class MemberService
 
 // ---------------------- 서비스 메소드 --------------------------
 
-    // * 로그인된 엔티티 호출
+    // * 로그인된 엔티티 호출 [ 시큐리티 적용 전, 후 ]
     public MemberEntity getEntity(){
         // 1. 로그인 정보 확인[ 세션 = loginMno ]
-        Object object = request.getSession().getAttribute("loginMno");
+            //Object object = request.getSession().getAttribute("loginMno");
+        Object object = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
         if( object == null ) { return null; }
         // 2. 로그인된 회원번호
-        int mno = (Integer)object;
+            //int mno = (Integer)object;
+        //System.out.println( object.toString());
+        MemberDto memberDto = (MemberDto) object;
+
         // 3. 회원번호 --> 회원정보 호출
-        Optional<MemberEntity> optional =  memberRepository.findById(mno);
+            //Optional<MemberEntity> optional =  memberRepository.findById(mno);
+        Optional<MemberEntity> optional = memberRepository.findByMemail( memberDto.getMemail() );
         if( !optional.isPresent() ){ return null; }
         // 4. 로그인된 회원의 엔티티
         return optional.get();

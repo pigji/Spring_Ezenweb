@@ -29,20 +29,21 @@ public class BoardService {
     @Autowired
     private HttpServletRequest request; // 요청 객체 선언
     @Autowired
-    private HttpServletResponse response;   // 응답객체 선언
-
+    private HttpServletResponse response; // 응답 객체 선언
     @Autowired
-    private MemberRepository memberRepository;  // 회원 리포지토리 객체 선언
+    private MemberRepository memberRepository; // 회원 리포지토리 객체 선언
     @Autowired
     private MemberService memberService;
     @Autowired
-    private BoardRepository boardRepository;    // 게시물 리포지토리 객체 선언
+    private BoardRepository boardRepository;// 게시물 리포지토리 객체 선언
     @Autowired
-    private BcategoryRepository bcategoryRepository;    // 카테고리 객체 선언
+    private BcategoryRepository bcategoryRepository;
+    // @Autowired
+    // private  BoardService boardService; // 불가능
 
 
     // 첨부파일 경로
-    String path = "C:\\Users\\504\\OneDrive\\바탕 화면\\SpringWeb\\Spring_Ezenweb\\src\\main\\resources\\static\\bupload\\";
+    String path = "C:\\";
 
         // @Transactional : 엔티티 DML 적용할때 사용되는 어노테이션
         // 1. 메소드

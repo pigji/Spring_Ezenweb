@@ -17,6 +17,9 @@ import ConfirmButton from './Book/chapter8/ConfirmButton' // 8장 [ 클래스형
 import ConfirmButton2 from './Book/chapter8/ConfirmButton2' // 8장 [ 함수형 ]
 import TestState from './Book/chapter8/TestState' // 8장 [ setState vs prevState 비교 ]
 import LandingPage from './Book/chapter9/LandingPage' // 9장
+import AttendanceBook from './Book/chapter10/AttendanceBook' // 10장 [ 실습 ]
+import Signup from './Book/chapter11/SignUp' // 11장 [ 실습 ]
+
 
 
 // 2. DOM 컨테이너 [ 'root' 는 public --> index.html 안에 있는 태그 ]

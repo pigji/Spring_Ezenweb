@@ -31,6 +31,8 @@ import ConfirmButton from '../Book/chapter8/ConfirmButton' // 8장 [ 클래스�
 import ConfirmButton2 from '../Book/chapter8/ConfirmButton2' // 8장 [ 함수형 ]
 import TestState from '../Book/chapter8/TestState' // 8장 [ setState vs prevState 비교 ]
 import LandingPage from '../Book/chapter9/LandingPage' // 9장
+import AttendanceBook from '../Book/chapter10/AttendanceBook' // 10장
+import SignUp from '../Book/chapter11/SignUp' // 11장
 
 
 // 라우터 설치[ 터미널 ] : npm i react-router-dom   ==  npm install react-router-dom    // i는 install 약자
@@ -50,7 +52,8 @@ export default function Index( props ){
         <div className="webbox">
             <BrowserRouter>
                 <Header/>
-                        <Routes>    {/* 해당 경로 지정 */}
+                        <Routes>    {/* 해당 경로 지정 ( 경로명은 아무거나 ) */}
+                            {/* <Route path="경로지정" , element = { 컴포넌트명 /> } />  */}
                             <Route path="/" element = { <Home />} />
                             <Route path="/member/signup" element={ <Signup/> } />
                             <Route path="/member/login" element={ <Login/> } />
@@ -58,13 +61,15 @@ export default function Index( props ){
                             <Route path="/board/write" element={ <BoardWrite/> } />
                             <Route path="/book/list" element={ <BookList/> } />
 
-                            <Route path="/book/chapter3" element={ <Library/> } />
-                            <Route path="/book/chapter4" element={ <Clock/> } />
-                            <Route path="/book/chapter5" element={ <CommentList/> } />
-                            <Route path="/book/chapter6" element={ <NotificationList/> } />
-                            <Route path="/book/chapter7" element={ <Accommodate/> } />
-                            <Route path="/book/chapter8" element={ <ConfirmButton/> } />
-                            <Route path="/book/chapter9" element={ <LandingPage/> } />
+                            <Route path="/chapter3/Library" element={ <Library/> } />
+                            <Route path="/chapter4/Clock" element={ <Clock/> } />
+                            <Route path="/chapter5/CommentList" element={ <CommentList/> } />
+                            <Route path="/chapter6/NotificationList" element={ <NotificationList/> } />
+                            <Route path="/chapter7/Accommodate" element={ <Accommodate/> } />
+                            <Route path="/chapter8/ConfirmButton2" element={ <ConfirmButton/> } />
+                            <Route path="/chapter9/LandingPage" element={ <LandingPage/> } />
+                            <Route path="/chapter10/AttendanceBook" element={ <AttendanceBook/> } />
+                            <Route path="/chapter11/SignUp" element={ <SignUp/> } />
                         </Routes>
                 <Footer/>
             </BrowserRouter>

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월9일금요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환">
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월12일월요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670826848408</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="12월12일월요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환">
+      <created>1670828388264</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670828388264</updated>
+    </task>
+    <task id="LOCAL-00040" summary="12월12일월요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환">
+      <created>1670828502333</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1670828502333</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,7 +406,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11월18일금요일 회원제 게시판[ 글쓰기, 글목록, 글수정, 글삭제, 카테고리 ]" />
     <MESSAGE value="11월21일월요일 게시판 - 카테고리 등록, 전체출력, 카테고리별 게시판 출력" />
     <MESSAGE value="11월21일월요일 비회원제 게시판만들기 [ 카테고리 출력만 완성 ]" />
     <MESSAGE value="11월22일화요일 비회원제 게시판만들기 [ 글등록/출력, 카테고리 등록/출력, 삭제하기 -&gt; 완료 , 수정하기 미완성 ]" />
@@ -417,7 +430,8 @@
     <MESSAGE value="12월9일금요일 React_교재 10장, 11장 실습 [ 제어컴포넌트 , select태그 ]" />
     <MESSAGE value="12월9일금요일 Spring - 게시판 카테고리 등록/출력, 게시물 등록/출력( console )" />
     <MESSAGE value="12월9일금요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환" />
-    <option name="LAST_COMMIT_MESSAGE" value="12월9일금요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환" />
+    <MESSAGE value="12월12일월요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환" />
+    <option name="LAST_COMMIT_MESSAGE" value="12월12일월요일 Spring - 게시판 페이징처리, 검색처리, 상세페이지 전환" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

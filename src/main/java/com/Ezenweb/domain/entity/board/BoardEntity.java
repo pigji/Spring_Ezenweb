@@ -23,13 +23,17 @@ public class BoardEntity extends BaseEntity {
     @Id // pk 값
     @GeneratedValue( strategy = GenerationType.IDENTITY ) // auto
     private int bno;            // 게시물번호
+
     @Column( nullable = false )     // not null
     private String btitle;      // 게시물제목
+
     @Column( nullable = false , columnDefinition = "TEXT")     // not null , DB 자료형사용시 columnDefinition = "DB자료형"
     private String bcontent;    // 게시물 내용
+
     @Column( nullable = false )     // not null
     @ColumnDefault( "0" )           // JPA insert 할 경우 default
     private int bview;          // 조회수
+
     @Column
     private String bfile;       // 첨부파일
 

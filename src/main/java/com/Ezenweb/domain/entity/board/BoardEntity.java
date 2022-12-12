@@ -64,7 +64,7 @@ public class BoardEntity extends BaseEntity {
                         this.getCdate().toLocalTime().format( DateTimeFormatter.ofPattern(" HH : mm : ss ")) :
                         this.getCdate().toLocalDate().toString()
                 )
-                .build();           // 끝지점
+                .build();  // 끝지점
     }
 
 

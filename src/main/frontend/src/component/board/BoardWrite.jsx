@@ -78,9 +78,9 @@ export default function BoardWrite( props ) {
     );
 }
 
-    /*
+/*
         1. class => className ,
         2. onclick => onClick ,
         3. <태그> </태그>  , <태그 /> ,
         4. setbcategory() -> { 변수명 }
-     */
+*/

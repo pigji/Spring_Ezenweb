@@ -40,6 +40,6 @@ public interface BoardRepository extends JpaRepository< BoardEntity , Integer  >
                 "where " +
                     "IF( :bcno = 0 , bcno like '%%' , bcno = :bcno  ) and " +
                     "IF( :key = '' , true , IF( :key = 'btitle' ,  btitle like %:keyword% , bcontent like %:keyword%  ) )" , nativeQuery = true )
-        Page<BoardEntity> findBySearch( int bcno , String key , String keyword , Pageable pageable);
+        Page<BoardEntity> findBySearch( int bcno , String key , String keyword , Pageable pageable );
 
 } // end

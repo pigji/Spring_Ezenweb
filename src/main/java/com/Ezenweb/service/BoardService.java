@@ -144,7 +144,6 @@ public class BoardService {
         // 3. 검색여부 / 카테고리  판단
         elist = boardRepository.findBySearch( pageDto.getBcno() , pageDto.getKey() , pageDto.getKeyword() , pageable );
 
-
 //        if( pageDto.getKey().equals("btitle") ){ // 검색필드가 제목이면
 //            elist = boardRepository.findbybtitle( pageDto.getBcno() , pageDto.getKeyword() , pageable);
 //        }else if( pageDto.getKey().equals("bcotent") ){ // 검색필드가 제목이면

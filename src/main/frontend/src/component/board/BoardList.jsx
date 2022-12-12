@@ -90,7 +90,7 @@ export default function BoardList(){
                 }
             </table>
 
-            {/* 페이징 처리 */}
+            { /* 페이징 처리 */ }
             <Pagination
                 activePage={ pageInfo.page  }
                 itemsCountPerPage = { 3 }
@@ -99,7 +99,7 @@ export default function BoardList(){
                 onChange={ onPage }
             />
 
-            {/* 검색 처리 */}
+            { /* 검색 처리 */ }
             <div className="searchBox">
                <select className="key">
                     <option value="btitle">제목</option>

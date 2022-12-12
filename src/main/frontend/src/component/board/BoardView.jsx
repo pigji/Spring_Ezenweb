@@ -17,4 +17,4 @@ export default function BoardView( props ) {
             view 페이지로 들어왔다. 페이지번호 : { params.bno }
         </div>
     )
-}
+} // end

@@ -23,7 +23,7 @@ public class BoardDto {
     private String memail;      // 회원아이디
 
 
-    private String bdate;       // 작성일 [ LocalDateTime -> String 출력용 ]
+    private String bdate;      // 작성일 [ LocalDateTime -> String 출력용 ]
 /*    private int startbtn;
     private int endbtn;*/
 

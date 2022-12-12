@@ -18,6 +18,6 @@ public class PageDto {
     private List<BoardDto> list = new ArrayList<BoardDto>();    // 검색된 결과 게시물 리스트
     private int startbtn;       // 페이징 버튼 시작번호
     private int endbtn;         // 페이징 버튼 끝번호
-    private Long totalBoards;   // 총 게시물수 // .getTotalElements() 메소드가 반환타입 LONG
+    private Long totalBoards;   // 총 게시물수   // .getTotalElements() 메소드가 반환타입 LONG
 
 } // class end

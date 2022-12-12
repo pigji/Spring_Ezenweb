@@ -21,6 +21,8 @@ import BoardList from './board/BoardList';
 import BoardWrite from './board/BoardWrite';
 import BookList from '../Book/BookList';
 
+import BoardView from './board/BoardView';
+
 import Library from '../Book/chapter3/Library'   // 3장
 import Clock from '../Book/chapter4/Clock'       // 4장
 import CommentList from '../Book/chapter5/CommentList'   // 5장
@@ -60,6 +62,8 @@ export default function Index( props ){
                             <Route path="/board/list" element={ <BoardList/> } />
                             <Route path="/board/write" element={ <BoardWrite/> } />
                             <Route path="/book/list" element={ <BookList/> } />
+
+                            <Route path="/board/view/:bno" element={ <BoardView/> } />
 
                             <Route path="/chapter3/Library" element={ <Library/> } />
                             <Route path="/chapter4/Clock" element={ <Clock/> } />

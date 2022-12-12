@@ -22,8 +22,11 @@ public class BoardDto {
     private int bcno;            // 카테고리[ 카테고리 - fk ]
     private String memail;      // 회원아이디
 
-    private int startbtn;
-    private int endbtn;
+
+    private String bdate;       // 작성일 [ LocalDateTime -> String 출력용 ]
+/*    private int startbtn;
+    private int endbtn;*/
+
 
     // 1. 형변환
     public BoardEntity toEntity() {

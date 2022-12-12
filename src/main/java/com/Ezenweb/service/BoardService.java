@@ -2,6 +2,7 @@ package com.Ezenweb.service;
 
 import com.Ezenweb.domain.dto.BcategoryDto;
 import com.Ezenweb.domain.dto.BoardDto;
+import com.Ezenweb.domain.dto.PageDto;
 import com.Ezenweb.domain.entity.bcategory.BcategoryEntity;
 import com.Ezenweb.domain.entity.bcategory.BcategoryRepository;
 import com.Ezenweb.domain.entity.board.BoardEntity;
@@ -136,23 +137,27 @@ public class BoardService {
 
     // 2. 게시물 목록 조회
     @Transactional      // bcno : 카테고리번호 , page : 현재 페이지번호 , key : 검색필드명 , keyword : 검색 데이터
-    public List<BoardDto> boardlist(  int page , int bcno , String key , String keyword  ){
+    public PageDto boardlist( PageDto pageDto){
         Page<BoardEntity> elist = null; // 1. 페이징처리된 엔티티 리스트 객체 선언
         Pageable pageable = PageRequest.of(  // 2.페이징 설정 [ 페이지시작 : 0 부터 ] , 게시물수 , 정렬
-                page-1 , 3 , Sort.by( Sort.Direction.DESC , "bno")  );
+                pageDto.getPage()-1 , 3 , Sort.by( Sort.Direction.DESC , "bno")  );
         // 3. 검색여부 / 카테고리  판단
-        if( key.equals("btitle") ){ // 검색필드가 제목이면
-            elist = boardRepository.findbybtitle( bcno , keyword , pageable);
-        }else if( key.equals("bcotent") ){ // 검색필드가 제목이면
-            elist = boardRepository.findbybcontent( bcno , keyword , pageable);
-        }else{ // 검색이 없으면 // 카테고리 출력
-            if( bcno == 0  ) elist = boardRepository.findAll( pageable);
-            else elist = boardRepository.findBybcno( bcno , pageable);
-        }
+        elist = boardRepository.findBySearch( pageDto.getBcno() , pageDto.getKey() , pageDto.getKeyword() , pageable );
+
+
+//        if( pageDto.getKey().equals("btitle") ){ // 검색필드가 제목이면
+//            elist = boardRepository.findbybtitle( pageDto.getBcno() , pageDto.getKeyword() , pageable);
+//        }else if( pageDto.getKey().equals("bcotent") ){ // 검색필드가 제목이면
+//            elist = boardRepository.findbybcontent( pageDto.getBcno() , pageDto.getKeyword()  , pageable);
+//        }else{ // 검색이 없으면 // 카테고리 출력
+//            if( pageDto.getBcno() == 0  ) elist = boardRepository.findAll( pageable);
+//            else elist = boardRepository.findBybcno( pageDto.getBcno() , pageable);
+//        }
+
 
         // 프론트엔드에 표시할 페이징번호버튼 수
         int btncount = 5;                               // 1.페이지에 표시할 총 페이지 버튼 개수
-        int startbtn = (page/btncount) * btncount +1;   // 2. 시작번호 버튼
+        int startbtn = (pageDto.getPage()/btncount) * btncount +1;   // 2. 시작번호 버튼
         int endbtn = startbtn + btncount-1;             // 3. 마지막번호 버튼
         if( endbtn > elist.getTotalPages() ) endbtn =elist.getTotalPages();
 
@@ -160,11 +165,12 @@ public class BoardService {
         for( BoardEntity entity : elist ){ // 3. 변환
             dlist.add( entity.toDto() );
         }
+        pageDto.setList( dlist  );  // 결과 리스트 담기
+        pageDto.setStartbtn( startbtn );
+        pageDto.setEndbtn( endbtn );
+        pageDto.setTotalBoards( elist.getTotalElements() );
 
-        dlist.get(0).setStartbtn( startbtn );
-        dlist.get(0).setEndbtn( endbtn );
-
-        return dlist;  // 4. 변환된 리스트 dist 반환
+        return pageDto;
     }
 
     // 3. 게시물 개별 조회

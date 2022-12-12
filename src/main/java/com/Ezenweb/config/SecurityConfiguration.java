@@ -47,7 +47,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .ignoringAntMatchers("/member/getmember")   // 로그인 post 사용  // 해당 URL 요청 방지 해지
                     .ignoringAntMatchers("/member/setmember")  // 회원가입 post 사용
                     .ignoringAntMatchers("/board/setbcategory")  // 카테고리
-                    .ignoringAntMatchers("/board/setboard")  // 게시물
+                    .ignoringAntMatchers("/board/setboard")  // 게시물 입력 post 사용
+                    .ignoringAntMatchers("/board/boardlist")  // 게시물 출력 post 사용
 
                 .and() // 기능 구분
                      .oauth2Login() // 소셜 로그인 보안 설정

@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월8일목요일 Spring_ 로그인 했을때만 나타나는 메뉴설정, BookList에 실습내용 출력">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter10/AttendanceBook.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter11/Ex1_Form.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/chapter11/SignUp.jsx" afterDir="false" />
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월9일금요일 Spring - 게시판 카테고리 등록/출력, 게시물 등록/출력( console )">
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardView.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/PageDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Book/BookList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Book/BookList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardWrite.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/board/BoardWrite.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/BoardDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/board/BoardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/board/BoardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/board/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/board/BoardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +361,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670481110963</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="12월9일금요일 React_교재 10장, 11장 실습 [ 제어컴포넌트 , select태그 ]">
+      <created>1670570315120</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670570315120</updated>
+    </task>
+    <task id="LOCAL-00036" summary="12월9일금요일 Spring - 게시판 카테고리 등록/출력, 게시물 등록/출력( console )">
+      <created>1670570375745</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1670570375745</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,8 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11월16일수요일 회원목록 출력, SMTP" />
-    <MESSAGE value="11월16일수요일 SMTP[ 메일전송, 인증번호 ]" />
     <MESSAGE value="11월17일목요일 게시판 만들기" />
     <MESSAGE value="11월18일금요일 회원제 게시판[ 글쓰기, 글목록, 글수정, 글삭제, 카테고리 ]" />
     <MESSAGE value="11월21일월요일 게시판 - 카테고리 등록, 전체출력, 카테고리별 게시판 출력" />
@@ -400,7 +413,9 @@
     <MESSAGE value="12월7일수요일 Spring_React 글쓰기 컴포넌트" />
     <MESSAGE value="12월8일목요일 React_8장 , 9장 실습예제" />
     <MESSAGE value="12월8일목요일 Spring_ 로그인 했을때만 나타나는 메뉴설정, BookList에 실습내용 출력" />
-    <option name="LAST_COMMIT_MESSAGE" value="12월8일목요일 Spring_ 로그인 했을때만 나타나는 메뉴설정, BookList에 실습내용 출력" />
+    <MESSAGE value="12월9일금요일 React_교재 10장, 11장 실습 [ 제어컴포넌트 , select태그 ]" />
+    <MESSAGE value="12월9일금요일 Spring - 게시판 카테고리 등록/출력, 게시물 등록/출력( console )" />
+    <option name="LAST_COMMIT_MESSAGE" value="12월9일금요일 Spring - 게시판 카테고리 등록/출력, 게시물 등록/출력( console )" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -44,8 +44,7 @@ public class BoardService {
 
 
     // 첨부파일 경로
-    String path = "C:\\";
-
+    String path = "C:\\upload\\";   // C드라이브 --> upload 폴더 생성
         // @Transactional : 엔티티 DML 적용할때 사용되는 어노테이션
         // 1. 메소드
             /*
@@ -86,7 +85,7 @@ public class BoardService {
     // * 첨부파일 업로드 [ 1. 쓰기메소드    2. 수정메소드 ] 사용
     @Transactional      //  boardDto : 쓰기,수정 대상     BoardEntity:원본
     public boolean fileupload( BoardDto boardDto, BoardEntity boardEntity ){
-        if( boardDto.getBfile() != null ) { // ** 첨부파일 있을때
+        if( !boardDto.getBfile().getOriginalFilename().equals("") ) { // ** 첨부파일 있을때
             // *업로드된 파일의 이름[ 문제점 : 파일명 중복 ]
             String uuid = UUID.randomUUID().toString();     // 1. 난수생성
             String filename = uuid + "_" + boardDto.getBfile().getOriginalFilename();   // 2. 난수발생
@@ -96,7 +95,6 @@ public class BoardService {
 
             // * 첨부파일 업로드   // 3. 저장할 경로
             try {
-                // 4. 경로+파일명 [ 객체화 ]
                 File uploadfile = new File(path + filename);    // 4. 경로 + 파일명 [ 객체화 ]
                 boardDto.getBfile().transferTo(uploadfile);             // 5. 해당 객체 경로로 업로드
             } catch (Exception e) {
@@ -137,7 +135,7 @@ public class BoardService {
 
     // 2. 게시물 목록 조회
     @Transactional      // bcno : 카테고리번호 , page : 현재 페이지번호 , key : 검색필드명 , keyword : 검색 데이터
-    public PageDto boardlist( PageDto pageDto){
+    public PageDto boardlist( PageDto pageDto ){
         Page<BoardEntity> elist = null; // 1. 페이징처리된 엔티티 리스트 객체 선언
         Pageable pageable = PageRequest.of(  // 2.페이징 설정 [ 페이지시작 : 0 부터 ] , 게시물수 , 정렬
                 pageDto.getPage()-1 , 3 , Sort.by( Sort.Direction.DESC , "bno")  );
@@ -165,8 +163,6 @@ public class BoardService {
             dlist.add( entity.toDto() );
         }
         pageDto.setList( dlist  );  // 결과 리스트 담기
-        pageDto.setStartbtn( startbtn );
-        pageDto.setEndbtn( endbtn );
         pageDto.setTotalBoards( elist.getTotalElements() );
 
         return pageDto;
@@ -195,9 +191,9 @@ public class BoardService {
             BoardEntity boardEntity = optional.get();
 
             // 첨부파일 삭제
-            if( boardEntity.getBfile() != null ){
-                File file = new File( path + boardEntity.getBfile() );
-                if( file.exists() ){ file.delete(); }
+            if( boardEntity.getBfile() != null ){   // 기존 첨부파일 있을때
+                File file = new File( path + boardEntity.getBfile() ); // 기존 첨부파일 객체화
+                if( file.exists() ){ file.delete(); }           // 존재하면  /// 파일 삭제
             }
 
             boardRepository.delete( boardEntity );   // 찾은 엔티티를 삭제
@@ -215,13 +211,13 @@ public class BoardService {
             BoardEntity boardEntity = optional.get();
 
                 // 1. 수정할 첨부파일이 있을때 ---> 새로운 첨부파일 업로드, DB 수정한다.
-                if( boardDto.getBfile() != null ) {     // boardDto : 수정할 정보    boardEntity : 원본 [ DB테이블 ]
+                if( !boardDto.getBfile().getOriginalFilename().equals("") ) {     // boardDto : 수정할 정보    boardEntity : 원본 [ DB테이블 ]
                     if( boardEntity.getBfile() != null ){    // 기존 첨부파일 있을때
                         File file = new File(path + boardEntity.getBfile() );    // 기존 첨부파일 객체화
                         if (file.exists()) { file.delete(); }  // 존재하면  // 파일 삭제
                     }
                     // 업로드 함수 실행
-                    fileupload( boardDto, boardEntity );
+                    fileupload( boardDto, boardEntity );    // 업로드 함수 실행
                 }
 
             // *수정처리 [ 메소드가 별도 존재x 엔티티 <---> 레코드 / 엔티티 객체 필드를 수정 : @Transactional ]

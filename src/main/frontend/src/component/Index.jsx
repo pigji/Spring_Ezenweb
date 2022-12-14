@@ -17,10 +17,12 @@ import Home from './Home';
 import Footer from './Footer';
 import Signup from './member/Signup';
 import Login from './member/Login';
-import BoardList from './board/BoardList';
-import BoardWrite from './board/BoardWrite';
+import BoardWrite from './board/BoardWrite';    // 글쓰기
+import BoardList from './board/BoardList';      // 글목록
+import BoardView from './board/BoardView';      // 글 상세보기, 삭제
+import BoardUpdate from './board/BoardUpdate';  // 글 수정
+
 import BookList from '../Book/BookList';
-import BoardView from './board/BoardView';
 
 import Library from '../Book/chapter3/Library'   // 3장
 import Clock from '../Book/chapter4/Clock'       // 4장
@@ -60,10 +62,10 @@ export default function Index( props ){
                             <Route path="/member/login" element={ <Login/> } />
                             <Route path="/board/list" element={ <BoardList/> } />
                             <Route path="/board/write" element={ <BoardWrite/> } />
-                            <Route path="/book/list" element={ <BookList/> } />
-
                             <Route path="/board/view/:bno" element={ <BoardView/> } />
+                            <Route path="/board/update/:bno" element={ <BoardUpdate/> } />
 
+                            <Route path="/book/list" element={ <BookList/> } />
                             <Route path="/chapter3/Library" element={ <Library/> } />
                             <Route path="/chapter4/Clock" element={ <Clock/> } />
                             <Route path="/chapter5/CommentList" element={ <CommentList/> } />

@@ -24,7 +24,7 @@ public class BoardController {
         // 2. @Autowired 어노테이션을 이용해서 Spring 컨테이너에 빈[메모리] 생성
 
     @Autowired // 의존성 주입
-    private BoardService boardService = new BoardService();
+    private BoardService boardService;
 
     //------------- 2. 페이지 요청 로드[ view ] --> 리액트 사용시 사라짐. --------------------//
 /*
@@ -78,10 +78,11 @@ public class BoardController {
 
     // 5. 게시물 수정 [ 첨부파일 ]
     @PutMapping("/upboard")
-    public boolean upboard( BoardDto boardDto ){
+    public boolean upboard( BoardDto boardDto){
         return boardService.upboard( boardDto );
     }
 
+//    5. 게시물 수정 [ 첨부파일x ]
 //    @PutMapping("/upboard")
 //    public boolean upboard( @RequestBody BoardDto boardDto ){
 //        return boardService.upboard( boardDto );

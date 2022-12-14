@@ -14,7 +14,7 @@ public class BoardDto {
     private String btitle;      // 게시물제목
     private String bcontent;    // 게시물내용
     private int bview;          // 조회수
-    private MultipartFile bfile;       // 첨부파일
+    private MultipartFile bfile;       // 첨부파일 객체[ 업로드용 ]
         // spring : MultipartFile
         // jsp : con 라이브러리
 

@@ -21,9 +21,9 @@ import BoardWrite from './board/BoardWrite';    // 글쓰기
 import BoardList from './board/BoardList';      // 글목록
 import BoardView from './board/BoardView';      // 글 상세보기, 삭제
 import BoardUpdate from './board/BoardUpdate';  // 글 수정
+import Chatting from './chatting/Chatting';     // 채팅
 
 import BookList from '../Book/BookList';
-
 import Library from '../Book/chapter3/Library'   // 3장
 import Clock from '../Book/chapter4/Clock'       // 4장
 import CommentList from '../Book/chapter5/CommentList'   // 5장
@@ -64,6 +64,7 @@ export default function Index( props ){
                             <Route path="/board/write" element={ <BoardWrite/> } />
                             <Route path="/board/view/:bno" element={ <BoardView/> } />
                             <Route path="/board/update/:bno" element={ <BoardUpdate/> } />
+                            <Route path="/chatting" element={ <Chatting/> } />
 
                             <Route path="/book/list" element={ <BookList/> } />
                             <Route path="/chapter3/Library" element={ <Library/> } />

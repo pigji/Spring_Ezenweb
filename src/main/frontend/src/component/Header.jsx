@@ -39,6 +39,7 @@ export default function Header(){
                           )
                      }
                      <li> <Link to="/board/list" > 자유게시판     </Link> </li>
+                     <li> <Link to="/chatting" > 익명채팅방     </Link> </li>
 
                 </ul>
             </div>

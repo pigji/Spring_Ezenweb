@@ -19,7 +19,7 @@ import TestState from './Book/chapter8/TestState' // 8장 [ setState vs prevStat
 import LandingPage from './Book/chapter9/LandingPage' // 9장
 import AttendanceBook from './Book/chapter10/AttendanceBook' // 10장 [ 실습 ]
 import Signup from './Book/chapter11/SignUp' // 11장 [ 실습 ]
-
+import Calculator from './Book/chapter12/Calculator' // 12장 [ 실습 ]
 
 
 // 2. DOM 컨테이너 [ 'root' 는 public --> index.html 안에 있는 태그 ]

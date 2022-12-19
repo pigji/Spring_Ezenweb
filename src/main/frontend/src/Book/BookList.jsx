@@ -15,6 +15,7 @@ export default function BookList( props ) {
                 <li><Link to="/chapter9/LandingPage"> chapter9 </Link></li>
                 <li><Link to="/chapter10/AttendanceBook"> chapter10 </Link></li>
                 <li><Link to="/chapter11/SignUp"> chapter11 </Link></li>
+                <li><Link to="/chapter12/Calculator"> chapter12 </Link></li>
             </ul>
         </>
     );

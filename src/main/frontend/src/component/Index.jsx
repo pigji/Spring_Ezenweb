@@ -36,6 +36,7 @@ import TestState from '../Book/chapter8/TestState' // 8장 [ setState vs prevSta
 import LandingPage from '../Book/chapter9/LandingPage' // 9장
 import AttendanceBook from '../Book/chapter10/AttendanceBook' // 10장
 import SignUp from '../Book/chapter11/SignUp' // 11장
+import Calculator from '../Book/chapter12/Calculator' // 12장
 
 
 // 라우터 설치[ 터미널 ] : npm i react-router-dom   ==  npm install react-router-dom    // i는 install 약자
@@ -76,6 +77,7 @@ export default function Index( props ){
                             <Route path="/chapter9/LandingPage" element={ <LandingPage/> } />
                             <Route path="/chapter10/AttendanceBook" element={ <AttendanceBook/> } />
                             <Route path="/chapter11/SignUp" element={ <SignUp/> } />
+                            <Route path="/chapter12/Calculator" element={ <Calculator/> } />
                         </Routes>
                 <Footer/>
             </BrowserRouter>

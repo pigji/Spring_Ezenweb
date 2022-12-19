@@ -4,17 +4,10 @@ import com.Ezenweb.domain.entity.member.MemberEntity;
 import lombok.*;
 
 import java.util.Map;
-import java.util.stream.DoubleStream;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
-@Builder
+@NoArgsConstructor @AllArgsConstructor
+@Getter@Setter@ToString@Builder
 public class OauthDto {
-
-    // 필드
     private String memail;                      // 아이디 [이메일]
     private String mname;                       // 이름[닉네임]
     private String registrationId;              // auth 회사명
@@ -56,6 +49,7 @@ public class OauthDto {
                 .attributes( attributes )
                 .build();
     }
+
     // 3. 구글 객체 생성 메소드
     public static OauthDto ofGoogle( String registrationId , String oauth2UserInfo , Map<String , Object> attributes ){
         System.out.println("Google attributes " + attributes );
@@ -72,8 +66,8 @@ public class OauthDto {
     public MemberEntity toEntity(  ){
         return MemberEntity.builder()
                 .memail( this.memail )
-                .mrol( this.registrationId )
+                .mrol( "ROLE_MEMBER" ) // 권한부여
                 .build();
     }
 
-} // class end
+} // end

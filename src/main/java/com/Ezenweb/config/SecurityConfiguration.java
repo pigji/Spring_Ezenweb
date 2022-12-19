@@ -28,13 +28,26 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         //super.configure(http);
 
         http
-                .formLogin()                // 로그인 페이지 보안설정
-                    .loginPage("/member/login") // 아이디와 비밀번호를 입력받을 URL[ 로그인 페이지 ]
-                    .loginProcessingUrl("/member/getmember") // 로그인을 처리할 URL [ 서비스 --> loadUserByUsername ]
-                    .defaultSuccessUrl("/") // 로그인 성공했을때 이동할 URL
-                    .failureUrl("/member/login")  // 로그인 실패시 이동할 URL
-                    .usernameParameter("memail")     // 아이디 변수명
-                    .passwordParameter("mpassword") // 비밀번호 변수명
+                // 권한[ role ]에 따른 http 접근 제한 두기
+                .authorizeHttpRequests() // 1. 인증 http 요청들 [ 인증-로그인된 ] http 조건들
+                    .antMatchers("/board/write")
+                        .hasRole("MEMBER") // 게시물쓰기는 회원[MEMBER]만 가능
+                    .antMatchers("/board/update/**")
+                        .hasRole("MEMBER")
+                    .antMatchers("/admin/**")
+                        .hasRole("ADMIN") // admin 시작하는 경로들은 ADMIN 권한 접근 가능
+                    .antMatchers("/**")
+                        .permitAll() // 접근 제한 없음 [ 모든 유저가 사용가능 ]
+
+
+                .and()
+                    .formLogin()                // 로그인 페이지 보안설정
+                        .loginPage("/member/login") // 아이디와 비밀번호를 입력받을 URL[ 로그인 페이지 ]
+                        .loginProcessingUrl("/member/getmember") // 로그인을 처리할 URL [ 서비스 --> loadUserByUsername ]
+                        .defaultSuccessUrl("/") // 로그인 성공했을때 이동할 URL
+                        .failureUrl("/member/login")  // 로그인 실패시 이동할 URL
+                        .usernameParameter("memail")     // 아이디 변수명
+                        .passwordParameter("mpassword") // 비밀번호 변수명
 
                 .and() // 구분 기능
                     .logout()   // 로그아웃 보안설정
@@ -85,5 +98,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             // WebSecurityConfigurerAdapter : 웹 시큐리티 설정 클래스
                   // 설정 종류
                       // 1. URL 권한
+
+    권한에 따른 http 제한두기
+
+        http
+            .authorizeRequests()     // 인증 요청 URL
+                .antMatchers("URL").permitAll()         // 1. 해당 URL 에 모든 ROLE 접근 가능
+                .antMatchers("URL").hasRole("권한이름")  // 2. 해당 URL 에 해당 권한명을 가진 인증만 접근 가능
+                .anyRequest().authentication()          // 3. 인증된 모든 사용자 접근 가능
+                .antMatchers("URL").denyAll()           // 2. 인증 상관없이 무조건 차단
+                .antMatchers("URL").hasIpAddress("ip 주소")   // 5. 해당 ip만 접근 가능
 
  */

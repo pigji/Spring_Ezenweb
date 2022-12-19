@@ -35,7 +35,6 @@ public class MemberService
     // UserDetailsService : 일반회원 --> loadUserByUsername 메소드 구현
     // OAuth2UserService<OAuth2UserRequest, OAuth2User> : 소셜회원 --> OAuth2User 구현
 
-
     @Override   // 로그인 성공한 쇼설 회원 정보를 받는 메소드
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
                                                         // userRequest : 인증 결과 요청변수
@@ -56,7 +55,6 @@ public class MemberService
                 .getProviderDetails()
                 .getUserInfoEndpoint()
                 .getUserNameAttributeName();
-
             System.out.println( "4. 회원정보 담긴 객체명  : " + oauth2UserInfo );
             System.out.println( "5. 인증결과 : " + oAuth2User.getAttributes() );
 
@@ -94,7 +92,6 @@ public class MemberService
         return memberDto;
     }
 
-
     // --------------------- 전역 객체 ----------------------------
     @Autowired
     private MemberRepository memberRepository;  // 리포지토리 객체
@@ -106,6 +103,7 @@ public class MemberService
 // ---------------------- 서비스 메소드 --------------------------
 
     // * 로그인된 엔티티 호출 [ 시큐리티 적용 전, 후 ]
+
     public MemberEntity getEntity(){
         // 1. 로그인 정보 확인[ 세션 = loginMno ]
             //Object object = request.getSession().getAttribute("loginMno");
@@ -125,8 +123,16 @@ public class MemberService
         return optional.get();
     }
 
+    /*
+
+        memberRepository :  리포지스토리 사용되는 메소드에는 @Transactional [ 매핑된 SQL 처리 하겠다는 뜻 ]
+                .save , .delete , find~~  메소드는 @Transactional 내장 되어 있어서  생략 가능하나
+                .update 메소드는 별도로 없기 때문에  @Transactional 필수
+
+     */
 
     // 1. [ 일반 ] 회원가입
+    @Transactional //
     public int setmember(MemberDto memberDto ){
         // 암호화 : 해시함수를 사용하는 암호화 기법 중 하나 [ BCrypt ]
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -135,9 +141,8 @@ public class MemberService
         // 1. DAO 처리 [ dto --> entity ]
         MemberEntity entity = memberRepository.save( memberDto.toEntity() );
             // memberRepository.save( 엔티티 객체 ) : 해당 엔티티 객체가 insert 생성된 엔티티객체 반환
-
         // 회원 등급 넣어주기
-        entity.setMrol("user");
+        entity.setMrol("ROLE_MEMBER");
 
         // 2. 결과 반환 [ 생성된 엔티티의 pk값 반환 ]
         return entity.getMno();
@@ -175,15 +180,14 @@ public class MemberService
 
         // 2. 검증된 토큰 생성 [ 일반 유저 ]
         Set<GrantedAuthority> authorities = new HashSet<>();
-        authorities.add( new SimpleGrantedAuthority("일반회원") );  // 토큰정보에 일반회원 내용 넣기
+        authorities.add( new SimpleGrantedAuthority( memberEntity.getMrol() )); // 토큰정보에 일반회원 내용 넣기
 
         // 3.
         MemberDto memberDto = memberEntity.toDto(); // 엔티티 --> Dto
-        memberDto.setAuthorities( authorities );    // dto --> 토큰 추가
+        memberDto.setAuthorities( authorities );       // dto --> 토큰 추가
         return memberDto;   // Dto 반환 [ MemberDto는 UserDetails의 구현체 ]
             // 구현체 : 해당 인터페이스의 추상메소드[ 선언만 ]를 구현해준 클래스의 객체
     }
-
 
     // 3. 비밀번호찾기
     public String getpassword( String memail ){
@@ -198,6 +202,7 @@ public class MemberService
         }
         return null;    // 존재하지 않는 이메일 입력시 null 값 출력
     }
+
     // 4. 회원탈퇴
     public int setdelete( String mpassword ){
         // 1. 로그인된 회원의 엔티티 필요!!
@@ -221,6 +226,7 @@ public class MemberService
             }
             return 0; // [ 만약에 세션이 null 이면 반환 o 혹은 select 실패시   ]
     }
+
     // 5. 회원 수정
     @Transactional // 데이터 수정[update]시 필수!!
     public int setupdate( String mpassword ){
@@ -242,6 +248,7 @@ public class MemberService
         }
         return 0;
     }
+
     // 6. 로그인 여부 판단 [ http 세션 ]
 //    public int getloginMno(){
 //        // 1. 세션 호출
@@ -266,7 +273,7 @@ public class MemberService
         if( principal.equals("anonymousUser") ){ // anonymousUser 이면 로그인전
             return null;
         }else{ // anonymousUser 아니면 로그인후
-            MemberDto memberDto = (MemberDto) principal;
+            MemberDto memberDto = ( MemberDto ) principal;
             return memberDto.getMemail();
         }
     }
@@ -306,6 +313,7 @@ public class MemberService
         meailsend( toemail, "EzenWeb 인증코드", html );
         return auth;    // 인증코드 반환
     }
+
     // *. 메일 전송 서비스
     public void meailsend( String toemail , String title , String content ){
         try {
@@ -326,8 +334,6 @@ public class MemberService
         }catch (Exception e){ System.out.println("메일전송 실패 : "+e); }
 
     }
-
-
 } // clas end
 
 /*

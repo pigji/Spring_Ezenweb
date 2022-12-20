@@ -78,7 +78,7 @@ task buildReact(type: Exec) {
     }
 }
 
-task copyReactBuildFiles(type: Copy) {
+task copyReactBuildFiles(type: Copy) {  // // spring jsx[리액트파일] 인식불가 => 1. 우선 리액트 실행
     dependsOn "buildReact"
     from "$frontendDir/build"
     into "$projectDir/src/main/resources/static"

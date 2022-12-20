@@ -22,6 +22,7 @@ import BoardList from './board/BoardList';      // 글목록
 import BoardView from './board/BoardView';      // 글 상세보기, 삭제
 import BoardUpdate from './board/BoardUpdate';  // 글 수정
 import Chatting from './chatting/Chatting';     // 채팅
+import RoomWrite from './room/RoomWrite'       // 프로젝트 - 방 등록
 
 import BookList from '../Book/BookList';
 import Library from '../Book/chapter3/Library'   // 3장
@@ -37,6 +38,7 @@ import LandingPage from '../Book/chapter9/LandingPage' // 9장
 import AttendanceBook from '../Book/chapter10/AttendanceBook' // 10장
 import SignUp from '../Book/chapter11/SignUp' // 11장
 import Calculator from '../Book/chapter12/Calculator' // 12장
+
 
 
 // 라우터 설치[ 터미널 ] : npm i react-router-dom   ==  npm install react-router-dom    // i는 install 약자
@@ -66,6 +68,7 @@ export default function Index( props ){
                             <Route path="/board/view/:bno" element={ <BoardView/> } />
                             <Route path="/board/update/:bno" element={ <BoardUpdate/> } />
                             <Route path="/chatting" element={ <Chatting/> } />
+                            <Route path="/room/write" element={ <RoomWrite/> } />
 
                             <Route path="/book/list" element={ <BookList/> } />
                             <Route path="/chapter3/Library" element={ <Library/> } />

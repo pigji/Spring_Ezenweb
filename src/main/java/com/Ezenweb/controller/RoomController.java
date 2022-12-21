@@ -3,9 +3,12 @@ package com.Ezenweb.controller;
 import com.Ezenweb.domain.dto.RoomDto;
 import com.Ezenweb.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/room")    // 공통 URL
@@ -19,7 +22,11 @@ public class RoomController {
     // 주의할 점 : 리액트 라우터에 있는 path 의 주소와 같으면 오류 발생
     @PostMapping("/setroom")
     public boolean write( RoomDto roomDto ){
+        roomService.write( roomDto );
         System.out.println("방등록 컨트롤러 들어왔다."+roomDto.toString()); return true;
     }
+
+    @GetMapping("/getroomlist")
+    public List<RoomDto> getroomlist(){ return roomService.getroomlist();}
 
 } // end

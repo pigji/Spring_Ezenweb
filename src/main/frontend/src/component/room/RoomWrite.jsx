@@ -66,17 +66,15 @@ export default function RoomWrite( props ){
         })
 
     /* ------------------------------------*/
-
         // 4. 방 등록 버튼을 눌렀을때 이벤트
         const onWrite = () => {
             // 1. 방 이름, 가격, 거래방식, 여러개 이미지, 좌표[ 주소, 위도, 경도 ] --> 컨트롤러 --> 서비스 --> DB 저장
             // 1-1. 폼 전체 전송
             let roomform = document.querySelector('.roomform')
-            let formdata = new FormData( roomform );
-            // 2. 폼 전체 + 주소 정보
-            formdata.set( "rname", address.name );
-            formdata.set( "rlat", address.lat );
-            formdata.set( "rlng", address.lng );
+            let formdata = new FormData( roomform );    // 1. 폼 전체
+            formdata.set( "rname", address.name );      // 2. 폼 전체 + 주소 정보
+            formdata.set( "rlat", address.lat );        // 2. 폼 전체 + 좌표[ 위도 ]
+            formdata.set( "rlng", address.lng );        // 2. 폼 전체 + 좌표[ 경도 ]
             console.log( formdata );
             //3. 서버에게 요청
             axios.post("/room/setroom", formdata, { headers: { 'Content-Type': 'multipart/form-data'  } } )

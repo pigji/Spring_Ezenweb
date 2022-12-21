@@ -66,7 +66,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .ignoringAntMatchers("/board/boardlist")        // 게시물 출력 post 사용
                     .ignoringAntMatchers("/board/delboard")        // 게시물 삭제 delete 사용
                     .ignoringAntMatchers("/board/upboard")        // 게시물 수정 put 사용
-                    .ignoringAntMatchers("/room/setroom")        //  방 등록
+                    .ignoringAntMatchers("/room/setroom")        //  방 등록 post 사용
 
                 .and() // 기능 구분
                      .oauth2Login() // 소셜 로그인 보안 설정

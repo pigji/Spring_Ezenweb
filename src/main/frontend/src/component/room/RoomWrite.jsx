@@ -7,6 +7,7 @@ import icon from '../../img/roomicon.png';  // 아이콘 이미지 불러오기
     // http://localhost8080/static/media/roomicon.식별16진수.png
         // 서로 다른 컴포넌트 간 동일한 사진의 이름이 존재할 수 있으므로 식별 16진수 추가
 
+
 // 3.컴포넌트[함수] 만들기
 export default function RoomWrite( props ){
 

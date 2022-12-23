@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월20일화요일 Spring - 방 등록하기[ sout으로 확인 ], kakao map 사용, 이미지 마커 추가">
+    <list default="true" id="efaaafc6-c8ee-4c27-a0f4-f9c2c9ec9c5d" name="Changes" comment="12월21일수요일 Spring - 방 등록하기[ DB등록 확인 ], room 좌표 지도에 출력하기, kakao map 마커 클러스트, 마커 클릭이벤트 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/component/room/RoomWrite.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/component/room/RoomWrite.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/controller/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/RoomDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/dto/RoomDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/member/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/member/MemberEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/room/RoomEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/domain/entity/room/RoomEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ezenweb/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -446,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671520176412</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="12월21일수요일 Spring - 방 등록하기[ DB등록 확인 ], room 좌표 지도에 출력하기, kakao map 마커 클러스트, 마커 클릭이벤트 추가">
+      <created>1671596343541</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1671596343541</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -461,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11월23일수요일 비회원제게시판 만들기[ 글등록/출력, 카테고리 등록/출력, 삭제, 수정 --&gt; 완료 ], 첨부파일 미완성" />
     <MESSAGE value="11월24일목요일 첨부파일 수정, 삭제, 링크걸기" />
     <MESSAGE value="11월25일금요일 카테고리별 + 검색별 페이징처리" />
     <MESSAGE value="11월28일월요일 댓글 컴포넌트, 회원가입 api와 axios, spring 시큐리티" />
@@ -486,7 +488,8 @@
     <MESSAGE value="12월19일월요일 React - 교제 12장 예제[ 섭씨, 화씨온도 표현 ]" />
     <MESSAGE value="12월19일월요일 Spring - 권한 ROLE 부여" />
     <MESSAGE value="12월20일화요일 Spring - 방 등록하기[ sout으로 확인 ], kakao map 사용, 이미지 마커 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="12월20일화요일 Spring - 방 등록하기[ sout으로 확인 ], kakao map 사용, 이미지 마커 추가" />
+    <MESSAGE value="12월21일수요일 Spring - 방 등록하기[ DB등록 확인 ], room 좌표 지도에 출력하기, kakao map 마커 클러스트, 마커 클릭이벤트 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="12월21일수요일 Spring - 방 등록하기[ DB등록 확인 ], room 좌표 지도에 출력하기, kakao map 마커 클러스트, 마커 클릭이벤트 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

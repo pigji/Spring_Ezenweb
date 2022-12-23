@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,14 @@ public class RoomService {
     private RoomRepository roomRepository;
     @Autowired
     private RoomImgRepository roomImgRepository;
+
+    // 현재 스프링에 배포된 내장서버 폴더 -
+    // // String path ="C:\\프로젝트경로\\build\\resources\\main\\static\\bupload\\";
+    //String path = "C:\\Users\\504\\OneDrive\\바탕 화면\\SpringWeb\\Spring_Ezenweb\\build\\resources\\main\\static\\bupload\\";
+    // 현재 스프링에 배포된 내장 서버내 리액트 리소스[ view ] 폴더 - React 폴더
+        // 서버[ 내장서버 ]가 재 시작되면 ㅣㄹ드폴더에 업로드된 파일이 사라짐.
+    String path = "C:\\Users\\504\\OneDrive\\바탕 화면\\SpringWeb\\Spring_Ezenweb\\build\\resources\\main\\static\\static\\media\\";
+
 
     @Transactional
     public boolean write(RoomDto roomDto){
@@ -43,12 +52,24 @@ public class RoomService {
         memberEntity.getRoomEntityList().add( roomEntity );
             // 3. 사진 등록 저장[ fk ]
         roomDto.getRimg().forEach( (img) -> {   // 첨부파일이 여러개일 경우 혹은 존재할 경우
+
             if( !img.getOriginalFilename().equals("") ){ // 실제 첨부파일의 파일명이 존재할 경우
-                RoomImgEntity roomImgEntity = roomImgRepository.save(RoomImgEntity.builder().rimg( img.getOriginalFilename() ).build()
-                );   // 필드가 적을때는 굳이 DTO 필요 없음.
+                RoomImgEntity roomImgEntity = roomImgRepository.save( RoomImgEntity.builder().build() ); // 필드가 적을때는 굳이 DTO 필요 없음.
                 // 4. 룸에 사진엔티티 대입   // 5. 사진엔티티에 룸 대입[ 양방향 관계 ]
                 roomEntity.getRoomImgEntityList().add( roomImgEntity );
                 roomImgEntity.setRoomEntity( roomEntity );
+
+                // 첨부파일 사진 업로드
+                try {
+                    // 첨부파일에 식별자 추가[ 동일한 파일명이면 겹쳐서 문제가 생김 ] // [ pk값(Rimgno) + 파일명 ]
+                    String filename = roomImgEntity.getRimgno()+img.getOriginalFilename();  // 첨부파일된 실제 파일명
+                    roomImgEntity.setRimg( filename );  // DB에 식별자가 추가된 파일명으로 변경
+                    File file = new File(path + filename);  // 경로 + 첨부파일명 => file 클래스 객체화[ transferTo 함수의 인수 file ]
+                    img.transferTo( file );
+                }catch ( Exception e ){
+                    System.out.println("[업로드 실패] : "+ e ); }
+                        // MultipartFile 인터페이스
+                        // transferTo : 업로드[ 파일 이동 ] 함수  // 기존파일.transferTo( 이동할 경로 )
             }
         });
         return true;
